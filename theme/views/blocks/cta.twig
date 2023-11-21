@@ -1,0 +1,23 @@
+{% set blockBackground = 'is-style-dark' in block.customClass ? 'bg-gradient-to-br from-[#092342] to-[#06172D]' : 'bg-[#F5F9FF]' %}
+
+<section class="kk-block section px-4 {{ block.customClass }}" {{ block.anchor }}
+         data-block="{{ block.name|replace({'kk/': ''}) }}">
+    <div class="container items-center py-20 xl:py-32 rounded-lg text-center relative {{ blockBackground }}">
+        <div class="background-squares">
+            <img src="{{ theme.link }}/assets/images/sqaures-top-{{ 'is-style-dark' in block.customClass ? 'light' : 'dark' }}.svg"
+                 alt=""
+                 class="absolute top-0 right-0 h-1/2 sm:h-3/4 lg:h-full">
+            <img src="{{ theme.link }}/assets/images/sqaures-bottom-{{ 'is-style-dark' in block.customClass ? 'light' : 'dark' }}.svg"
+                 alt=""
+                 class="absolute bottom-0 left-0 h-1/2 sm:h-3/4 lg:h-full">
+        </div>
+        <div class="grid grid-cols-12 gap-4">
+            <div class="col-span-10 col-start-2 xl:col-span-8 xl:col-start-3">
+                <InnerBlocks
+                        allowedBlocks="{{ allowed_blocks | json_encode() | escape('html_attr') }}"
+                        template="{{ allowed_blocks_template | json_encode() | escape('html_attr') }}"
+                />
+            </div>
+        </div>
+    </div>
+</section>

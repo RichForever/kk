@@ -1,13 +1,30 @@
-{#<footer class="bg-white py-10">#}
-{#    footer content here#}
-{#</footer>#}
+<footer class="bg-purple-800 text-purple-200 kk-footer section">
+    <div class="container px-4 py-16 text-center xl:text-left 2xl:py-20">
+        <div class="gap-4 xl:grid xl:grid-cols-12">
+            <div class="mb-16 footer__widget footer__widget-1 xl:col-span-5 xl:col-start-1 xl:mb-0">
+                {{ footer_widget_1 }}
+            </div>
+            <div class="xl:col-span-6 xl:col-start-7 xl:flex 2xl:col-span-4 2xl:col-start-9 xl:flex-col 2xl:flex-row">
+                <div class="mb-12 footer__widget footer__widget-2 2xl:w-1/2 2xl:mb-0">
+                    {{ footer_widget_2 }}
+                </div>
+                <div class="footer__widget footer__widget-3 2xl:w-1/2">
+                    {{ footer_widget_3 }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-purple-700 px-4 py-8 text-center sm:py-10">
+        <p class="text-sm font-regular">2023 Wszelkie Prawa Zastrzeżone</p>
+    </div>
+</footer>
 
 <button id="scrollUp" class="fixed right-6 bottom-6" style="display: none;" x-data @click.window="window.scrollTo({top: 0, behavior: 'smooth'})">
     <span class="sr-only">Kliknij i przewiń stronę na górę</span>
-    <div class="scrollUp__inner w-10 h-10 lg:w-12 lg:h-12 2xl:w-[58px] 2xl:h-[58px] bg-orange-100 rounded-full z-10 top-[2px] left-[2px] absolute">
+    <div class="absolute z-10 h-10 w-10 rounded-full bg-orange-100 scrollUp__inner top-[2px] left-[2px] lg:h-12 lg:w-12 2xl:w-[58px] 2xl:h-[58px]">
         <div class="flex items-center justify-center w-full h-full [&>*]:-rotate-90">
             {{ function('wpstarter_get_icon', 'chevron') }}
         </div>
     </div>
-    <div class="scrollUp__background rounded-full w-[44px] h-[44px] lg:h-[52px] lg:w-[52px] 2xl:w-[62px] 2xl:h-[62px] bg-orange-500"></div>
+    <div class="rounded-full bg-orange-500 scrollUp__background w-[44px] h-[44px] lg:h-[52px] lg:w-[52px] 2xl:w-[62px] 2xl:h-[62px]"></div>
 </button>

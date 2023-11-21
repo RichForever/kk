@@ -24,6 +24,7 @@ class wpstarter extends Timber\Site {
 		add_action( 'acf/init', [ $this, 'register_blocks' ] );
 		add_action( 'block_categories_all', [ $this, 'register_blocks_category' ] );
 		add_action( 'init', [ $this, 'register_images' ] );
+		add_action( 'init', [ $this, 'register_svg_support' ] );
 		add_action( 'after_setup_theme', [ $this, 'register_icons' ] );
 		add_action( 'init', [ $this, 'register_menus' ] );
 		add_action( 'widgets_init', [ $this, 'register_widgets' ] );
@@ -45,6 +46,9 @@ class wpstarter extends Timber\Site {
 		$context['main_menu']   = Timber::get_menu( 'main_menu' );
 		$context['footer_menu'] = Timber::get_menu( 'footer_menu' );
 		$context['options']     = get_fields( 'option' );
+        $context['footer_widget_1'] = Timber::get_widgets('footer_widget_1');
+        $context['footer_widget_2'] = Timber::get_widgets('footer_widget_2');
+        $context['footer_widget_3'] = Timber::get_widgets('footer_widget_3');
 
 		return $context;
 	}
@@ -70,7 +74,7 @@ class wpstarter extends Timber\Site {
 	}
 
 	public function register_images() {
-		require_once "lib/images.php";
+		require_once "lib/svg-support.php";
 	}
 
 	public function register_icons() {

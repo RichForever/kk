@@ -5,7 +5,9 @@
   "license": "MIT",
   "require": {
     "timber/timber": "^2.0",
-    "wpengine/advanced-custom-fields-pro": "^6.0"
+    "wpengine/advanced-custom-fields-pro": "^6.0",
+    "houke/acf-icon-picker": "dev-master",
+    "wpackagist-plugin/contact-form-7": "^5.7.6"
   },
   "repositories": [
     {

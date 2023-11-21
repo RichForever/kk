@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9008fc5e5f291396ee52e01b092fce93",
+    "content-hash": "6706a5c665e3d45d13517cb7bd10ed3b",
     "packages": [
         {
             "name": "composer/installers",
@@ -150,6 +150,34 @@
                 }
             ],
             "time": "2022-08-20T06:45:11+00:00"
+        },
+        {
+            "name": "houke/acf-icon-picker",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/smeedijzer-online/acf-icon-picker.git",
+                "reference": "f6a0ad1ec1979689f70bd9268a8d3e3967263a91"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/smeedijzer-online/acf-icon-picker/zipball/f6a0ad1ec1979689f70bd9268a8d3e3967263a91",
+                "reference": "f6a0ad1ec1979689f70bd9268a8d3e3967263a91",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "houke"
+                }
+            ],
+            "description": "Add ACF field for selecting SVG icons.",
+            "support": {
+                "source": "https://github.com/smeedijzer-online/acf-icon-picker/tree/master"
+            },
+            "time": "2022-10-07T20:53:37+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -572,7 +600,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "houke/acf-icon-picker": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

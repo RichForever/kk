@@ -1,0 +1,5 @@
+auth.json
+vendor
+node_modules
+theme/public
+theme/dist

@@ -14,7 +14,8 @@ module.exports = {
             fontFamily: themeConfig.fontFamily,
             container: themeConfig.container,
             gridTemplateRows: themeConfig.gridTemplateRows,
-            gridRowEnd: themeConfig.gridRowEnd
+            gridRowEnd: themeConfig.gridRowEnd,
+            transitionTimingFunction: themeConfig.transitionTimingFunction
         },
     },
     plugins: [

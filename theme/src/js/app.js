@@ -8,7 +8,9 @@ import { initBlock } from './blocks';
 
 const blockNames = [
   "sample-block-1",
-  "cta"
+  "cta",
+  "contact",
+  "recent-posts"
 ];
 
 for (const item of blockNames) {

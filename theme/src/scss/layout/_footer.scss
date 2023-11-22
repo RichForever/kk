@@ -6,6 +6,9 @@
     img {
       @apply inline-block mb-6 xl:mb-9;
     }
+    * {
+      @apply text-purple-200;
+    }
     p:not(:last-child) {
       @apply mb-6;
     }

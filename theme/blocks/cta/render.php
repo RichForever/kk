@@ -5,19 +5,18 @@ $template = [
     ['core/heading',
         [
             'level' => 3,
-            'content' => 'Heading here',
-            'className' => 'text-white-500 font-extrabold mb-4 text-lg md:text-xl xl:text-2xl'
+            'content' => 'Potrzebujesz pomocy prawnej?',
+            'className' => 'text-white-500'
         ]
     ],
     ['core/paragraph',
         [
-            'content' => 'Content here',
-            'className' => 'font-regular text-base'
+            'content' => 'W zależności od Twojej sytuacji może to być jednorazowa konsultacja albo dłuższa współpraca',
         ]
     ],
     ['core/button',
         [
-            'text' => 'Label here',
+            'text' => 'skontaktuj się ze mną',
             'className' => 'kk-block__btn mt-6'
         ]
     ]

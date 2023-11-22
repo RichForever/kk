@@ -13,6 +13,9 @@
         </div>
         <div class="grid grid-cols-12 gap-4">
             <div class="col-span-10 col-start-2 xl:col-span-8 xl:col-start-3">
+                {% include 'partial/block-section-subtitle.twig' with {
+                    'content': fields.subtitle
+                } %}
                 <InnerBlocks
                         allowedBlocks="{{ allowed_blocks | json_encode() | escape('html_attr') }}"
                         template="{{ allowed_blocks_template | json_encode() | escape('html_attr') }}"

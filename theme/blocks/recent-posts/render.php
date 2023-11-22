@@ -5,20 +5,19 @@ $template = [
     ['core/heading',
         [
             'level' => 2,
-            'content' => 'Kontakt',
+            'content' => 'Heading here',
         ]
     ],
     ['core/paragraph',
         [
-            'content' => 'Każda relacja zaczyna się od pierwszego kontaktu. Możesz do mnie zadzwonić lub napisać SMS bądź wiadomość e-mail. 
-Telefony odbieram w dni robocze od 10:00 do 18:00. Jeśli nie odbiorę lub nie odpisuje od razu, to najpewniej pomagam w tym czasie innej osobie, a do Ciebie odpiszę lub oddzwonię w późniejszym terminie.',
+            'content' => 'Content here',
         ]
     ]
 
 ];
 
 
-$blockName = 'contact';
+$blockName = 'recent-posts';
 $context = Timber::context();
 $context['fields'] = get_fields();
 $context['block'] = [
@@ -30,5 +29,14 @@ $context['block'] = [
 $context['attributes'] = $block['attributes'];
 $context['allowed_blocks'] = $allowedBlocks;
 $context['allowed_blocks_template'] = $template;
+
+$context['posts'] = Timber::get_posts([
+    'post_type' => 'post',
+    'post_status' => 'publish',
+    'order' => 'ASC',
+    'orderby' => 'date',
+    'posts_per_page' => 2,
+	'cat' => get_field('categories')
+]);
 
 Timber::render('blocks/'.$blockName.'.twig', $context);

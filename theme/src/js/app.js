@@ -10,7 +10,8 @@ const blockNames = [
   "sample-block-1",
   "cta",
   "contact",
-  "recent-posts"
+  "recent-posts",
+  "info-boxes"
 ];
 
 for (const item of blockNames) {

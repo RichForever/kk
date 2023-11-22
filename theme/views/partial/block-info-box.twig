@@ -1,0 +1,17 @@
+<div class="{{ 'is-style-boxed' in block.customClass ? 'bg-white-500' : ''}} h-full flex flex-col items-center gap-6 rounded-lg border border-blue-100 bg-white hover:bg-gradient-to-br hover:from-[#1F6ED6] hover:to-[#1857AA] hover:border-blue-500 transition duration-150 ease-in-out-circ p-6 group lg:p-8">
+    <div class="box__icon">
+        {{ function('wpstarter_get_icon', box.icon) }}
+    </div>
+    <div class="box__content text-center">
+        <h3 class="text-md md:text-lg font-bold text-black-500 group-hover:text-white-500 mb-2">{{ box.title }}</h3>
+        <div class="group-hover:child:text-blue-100">{{ box.content }}</div>
+    </div>
+    {% if box.link.label and box.link.url %}
+        <div class="box__footer">
+            <a href="{{ box.link.url }}" class="inline-flex items-center gap-2 hover:underline group-hover:text-white-500 text-blue-500 font-semibold text-base">
+                {{ box.link.label }}
+                {{ function('wpstarter_get_icon', 'icon-arrow-small') }}
+            </a>
+        </div>
+    {% endif %}
+</div>

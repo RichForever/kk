@@ -5,12 +5,12 @@ $template = [
     ['core/heading',
         [
             'level' => 2,
-            'content' => 'Heading here',
+            'content' => 'Strefa wiedzy',
         ]
     ],
     ['core/paragraph',
         [
-            'content' => 'Content here',
+            'content' => 'Polskie prawo jest przeładowane przepisami i skomplikowane, a z roku na rok ten stan się pogłębia. Nie jestem w stanie napisać o wszystkim. Mam jednak nadzieję, że wśród publikowanych tu informacji znajdziesz odpowiedź na choćby część z Twoich wątpliwości.',
         ]
     ]
 

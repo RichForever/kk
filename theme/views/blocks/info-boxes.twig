@@ -17,9 +17,7 @@
         {% if fields.info_boxes_repeater %}
             <div class="flex flex-col gap-6 md:grid md:gap-4 md:grid-cols-2 xl:grid-cols-3">
                 {% for box in fields.info_boxes_repeater %}
-                    <div class="">
-                        {% include 'partial/block-info-box.twig' %}
-                    </div>
+                    {% include 'partial/block-info-box.twig' %}
                 {% endfor %}
             </div>
         {% endif %}

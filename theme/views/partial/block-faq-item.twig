@@ -1,0 +1,18 @@
+<div
+    x-data="{openAccordionItem: false}"
+    class="rounded-lg border border-solid  hover:text-blue-500 group p-6"
+    :class="openAccordionItem ? 'bg-[#F5F9FF] text-blue-500 border-blue-100' : 'bg-white-500 text-black-500 border-transparent'"
+>
+    <button
+        @click.prevent="openAccordionItem = !openAccordionItem"
+        class="flex text-left justify-between items-baseline w-full text-base font-semibold gap-2"
+    >
+        <span class="leading-normal">{{ item.question }}</span>
+        <div :class="openAccordionItem ? 'child:-rotate-180' : ''">
+            {{ function('wpstarter_get_icon', 'icon-chevron-small') }}
+        </div>
+    </button>
+    <div x-show="openAccordionItem" class="border-t border-t-solid border-t-blue-100 pt-6 mt-6 text-left">
+        {{ item.answer }}
+    </div>
+</div>

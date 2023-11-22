@@ -1,29 +1,23 @@
 <?php
 
-$allowedBlocks = ['core/heading', 'core/paragraph', 'core/button'];
+$allowedBlocks = ['core/heading', 'core/paragraph'];
 $template = [
     ['core/heading',
         [
-            'level' => 3,
-            'content' => 'Potrzebujesz pomocy prawnej?',
+            'level' => 2,
+            'content' => 'Upadłość konsumencka',
         ]
     ],
     ['core/paragraph',
         [
-            'content' => 'W zależności od Twojej sytuacji może to być jednorazowa konsultacja albo dłuższa współpraca',
-        ]
-    ],
-    ['core/button',
-        [
-            'text' => 'skontaktuj się ze mną',
-            'className' => 'kk-block__btn mt-6'
+            'content' => 'Jeśli jesteś zainteresowany tematyką upadłości konsumenckiej zachęcam Cię do zapoznania się z podstawowymi informacjami zaprezentowanymi poniżej.',
         ]
     ]
 
 ];
 
 
-$blockName = 'cta';
+$blockName = 'faq';
 $context = Timber::context();
 $context['fields'] = get_fields();
 $context['block'] = [

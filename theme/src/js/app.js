@@ -11,7 +11,11 @@ const blockNames = [
   "cta",
   "contact",
   "recent-posts",
-  "info-boxes"
+  "info-boxes",
+  "text-with-image",
+  "faq",
+  "page-title",
+  "hero"
 ];
 
 for (const item of blockNames) {

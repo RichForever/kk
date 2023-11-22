@@ -4,26 +4,26 @@ $allowedBlocks = ['core/heading', 'core/paragraph', 'core/button'];
 $template = [
     ['core/heading',
         [
-            'level' => 3,
-            'content' => 'Potrzebujesz pomocy prawnej?',
+            'level' => 2,
+            'content' => 'O mnie',
         ]
     ],
     ['core/paragraph',
         [
-            'content' => 'W zależności od Twojej sytuacji może to być jednorazowa konsultacja albo dłuższa współpraca',
+            'content' => 'Krzysztof Andrzej Kaczmarek radca prawny I doradca restrukturyzacyjny',
         ]
     ],
-    ['core/button',
-        [
-            'text' => 'skontaktuj się ze mną',
-            'className' => 'kk-block__btn mt-6'
-        ]
-    ]
+	['core/button',
+		[
+			'text' => 'poznaj bliżej',
+			'className' => 'kk-block__btn mt-6'
+		]
+	]
 
 ];
 
 
-$blockName = 'cta';
+$blockName = 'text-with-image';
 $context = Timber::context();
 $context['fields'] = get_fields();
 $context['block'] = [

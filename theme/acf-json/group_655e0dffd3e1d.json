@@ -1,0 +1,45 @@
+{
+    "key": "group_655e0dffd3e1d",
+    "title": "[Page Setting]",
+    "fields": [
+        {
+            "key": "field_655e0dff22d14",
+            "label": "Fixed menu",
+            "name": "fixed_menu",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Select to make menu position fixed",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1700662907
+}

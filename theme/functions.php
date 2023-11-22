@@ -45,6 +45,7 @@ class wpstarter extends Timber\Site {
 		$context['site']        = $this;
 		$context['main_menu']   = Timber::get_menu( 'main_menu' );
 		$context['footer_menu'] = Timber::get_menu( 'footer_menu' );
+		$context['fixed_menu'] = get_field('fixed_menu');
 		$context['options']     = get_fields( 'option' );
         $context['footer_widget_1'] = Timber::get_widgets('footer_widget_1');
         $context['footer_widget_2'] = Timber::get_widgets('footer_widget_2');

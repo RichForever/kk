@@ -1,7 +1,10 @@
-@use "~blocks/cta/editor" as cta;
 @use "~blocks/contact/editor" as contact;
+@use "~blocks/cta/editor" as cta;
+@use "~blocks/faq/editor" as faq;
+@use "~blocks/info-boxes/editor" as infoboxes;
+@use "~blocks/page-title/editor" as pagetitle;
 @use "~blocks/recent-posts/editor" as recentposts;
-@use "../../blocks/sample-block-1/editor";
+@use "~blocks/text-with-image/editor" as textwithimage;
 
 @use "base" as base;
 @use "components" as components;

@@ -1,0 +1,35 @@
+<section class="kk-block section px-4 {{ block.customClass }}" {{ block.anchor }}
+         data-block="{{ block.name|replace({'kk/': ''}) }}">
+    <div class="container items-center rounded-lg py-20 text-center md:text-left xl:py-32">
+        <div class="gap-4 lg:grid lg:grid-cols-12">
+            <div class="mb-16 text-center lg:col-span-8 lg:col-start-3 2xl:mb-20">
+                {% include 'partial/block-section-subtitle.twig' with {
+                    'content': fields.subtitle
+                } %}
+                <InnerBlocks
+                        allowedBlocks="{{ allowed_blocks | json_encode() | escape('html_attr') }}"
+                        template="{{ allowed_blocks_template | json_encode() | escape('html_attr') }}"
+                />
+            </div>
+        </div>
+        {% if fields.disclaimer %}
+            <div class="lg:grid lg:grid-cols-12 mb-16">
+                <div class="lg:col-span-8 lg:col-start-3">
+                    <div class="bg-blue-500 rounded-lg p-6 text-white-500 gap-4 flex flex-col text-left sm:flex-row sm:items-center">
+                        <div class="w-8 sm:w-24 md:w-20 lg:w-24 xl:w-20 2xl:w-16">
+                            {{ function('wpstarter_get_icon', 'icon-info-small') }}
+                        </div>
+                        <p class="text-white-500 font-medium">{{ fields.disclaimer }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+        {% if fields.faq_repeater %}
+            <div class="flex flex-col lg:gap-6 lg:grid lg:grid-cols-2 lg:gap-6">
+                {% for item in fields.faq_repeater %}
+                    {% include 'partial/block-faq-item.twig' %}
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</section>

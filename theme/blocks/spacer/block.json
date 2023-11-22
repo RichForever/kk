@@ -1,0 +1,26 @@
+{
+  "name": "kk/spacer",
+  "title": "Spacer",
+  "description": "Spacer Block",
+  "style": "",
+  "category": "custom",
+  "icon": "admin-comments",
+  "apiVersion": 2,
+  "keywords": [],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "render.php",
+    "postTypes": [ "post", "page" ]
+  },
+  "supports": {
+    "anchor": true
+  },
+  "example": {
+    "attributes": {
+      "data": {
+        "text": "This is an example text field",
+        "text_area": "This is an example text area field"
+      }
+    }
+  }
+}

@@ -1,11 +1,11 @@
 <footer class="bg-purple-800 kk-footer section">
-    <div class="container px-4 xl:px-0 py-16 text-center xl:text-left 2xl:py-20">
-        <div class="gap-4 xl:grid xl:grid-cols-12">
-            <div class="mb-16 footer__widget footer__widget-1 xl:col-span-5 xl:col-start-1 xl:mb-0">
+    <div class="container px-4 py-16 text-center xl:text-left 2xl:px-0 2xl:py-20">
+        <div class="flex flex-col gap-16 xl:flex-row xl:justify-between">
+            <div class="footer__widget footer__widget-1 xl:w-5/12">
                 {{ footer_widget_1 }}
             </div>
-            <div class="xl:col-span-6 xl:col-start-7 xl:flex 2xl:col-span-4 2xl:col-start-9 xl:flex-col 2xl:flex-row">
-                <div class="mb-12 footer__widget footer__widget-2 2xl:w-1/2 2xl:mb-0">
+            <div class="flex flex-col gap-8 xl:w-6/12 2xl:w-4/12 2xl:flex-row 2xl:justify-between 2xl:gap-4">
+                <div class="footer__widget footer__widget-2 2xl:w-1/2">
                     {{ footer_widget_2 }}
                 </div>
                 <div class="footer__widget footer__widget-3 2xl:w-1/2">
@@ -15,7 +15,7 @@
         </div>
     </div>
     <div class="bg-purple-700 px-4 py-8 text-center sm:py-10">
-        <p class="text-sm font-regular text-purple-200">© {{ 'now' | date('Y') }} Wszelkie Prawa Zastrzeżone</p>
+        <p class="text-sm text-purple-200 font-regular">© {{ 'now' | date('Y') }} Wszelkie Prawa Zastrzeżone</p>
     </div>
 </footer>
 

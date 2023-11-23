@@ -2,13 +2,13 @@
     <div class="box__icon">
         {{ function('wpstarter_get_icon', box.icon) }}
     </div>
-    <div class="box__content text-center">
-        <h3 class="text-md md:text-lg font-bold text-black-500 group-hover:text-white-500 mb-2">{{ box.title }}</h3>
+    <div class="text-center box__content">
+        <h3 class="mb-2 font-bold text-md text-black-500 group-hover:text-white-500 md:text-lg">{{ box.title }}</h3>
         <div class="group-hover:child:text-blue-100">{{ box.content }}</div>
     </div>
     {% if box.link.label and box.link.url %}
         <div class="box__footer">
-            <a href="{{ box.link.url }}" class="inline-flex items-center gap-2 hover:underline group-hover:text-white-500 text-blue-500 font-semibold text-base">
+            <a href="{{ box.link.url }}" class="inline-flex items-center gap-2 text-base font-semibold text-blue-500 group-hover:text-white-500 hover:underline">
                 {{ box.link.label }}
                 {{ function('wpstarter_get_icon', 'icon-arrow-small') }}
             </a>

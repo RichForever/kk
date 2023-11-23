@@ -7,7 +7,6 @@ import scrollToUp from './components/scrollToUp';
 import { initBlock } from './blocks';
 
 const blockNames = [
-  "sample-block-1",
   "cta",
   "contact",
   "recent-posts",

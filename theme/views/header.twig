@@ -3,7 +3,7 @@
     'absolute top-0 left-0 w-full z-[999] mt-0 bg-transparent' :
     'bg-white-500'
     }} py-4 lg:py-6 px-4 navbar {{ page == '404' ? 'hidden' : 'block' }}" x-data="{ open: false }" :class="open && 'active'">
-    <div class="flex flex-wrap items-center justify-between mx-auto lg:container">
+    <div class="mx-auto flex flex-wrap items-center justify-between lg:container">
         {% include 'partial/brand.twig' %}
         {% include 'partial/hamburger.twig' %}
         <div class="hidden w-full lg:block lg:w-auto navbar__menu {{ fixed_menu ? 'bg-white-500' : 'bg-[#F5F9FF]' }} rounded-lg mt-4 p-2 lg:bg-transparent lg:mt-0 lg:p-0" id="navbar-default">
@@ -12,5 +12,5 @@
             } %}
         </div>
     </div>
-    <div class="fixed top-0 left-0 w-full h-full bg-black-500/80 -z-[1] backdrop-blur-sm" x-show="open"></div>
+    <div class="fixed top-0 left-0 h-full w-full backdrop-blur-sm bg-black-500/80 -z-[1]" x-show="open"></div>
 </nav>

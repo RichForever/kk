@@ -21,49 +21,54 @@
           "size": "1rem"
         },
         {
+          "name": "md",
+          "slug": "md",
+          "size": "1.25rem"
+        },
+        {
           "name": "lg",
           "slug": "lg",
-          "size": "1.25rem"
+          "size": "1.562rem"
         },
         {
           "name": "xl",
           "slug": "xl",
-          "size": "1.5rem"
+          "size": "1.938rem"
         },
         {
           "name": "2xl",
           "slug": "2xl",
-          "size": "1.5625rem"
+          "size": "2.438rem"
         },
         {
           "name": "3xl",
           "slug": "3xl",
-          "size": "1.9375rem"
+          "size": "3.062rem"
         },
         {
           "name": "4xl",
           "slug": "4xl",
-          "size": "2.4375rem"
+          "size": "3.812rem"
         },
         {
           "name": "5xl",
           "slug": "5xl",
-          "size": "2.625rem"
+          "size": "4.750rem"
         },
         {
           "name": "6xl",
           "slug": "6xl",
-          "size": "3.0625rem"
+          "size": "5.938rem"
         },
         {
           "name": "7xl",
           "slug": "7xl",
-          "size": "3.8125rem"
+          "size": "7.438rem"
         },
         {
           "name": "8xl",
           "slug": "8xl",
-          "size": "4rem"
+          "size": "9.312rem"
         }
       ]
     },

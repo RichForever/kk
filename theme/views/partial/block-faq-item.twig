@@ -1,5 +1,13 @@
 <div
     x-data="{openAccordionItem: false}"
+{#    x-init="#}
+{#        $watch('openAccordionItem', (value, oldValue) => {#}
+{#            if (value && oldValue && oldValue !== '{{ loop.index }}') {#}
+{#                openAccordionItem = false;#}
+{#            }#}
+{#        });#}
+{#    "#}
+    @click.away="openAccordionItem = false"
     class="rounded-lg border border-solid p-6 group hover:text-blue-500"
     :class="openAccordionItem ? 'bg-[#F5F9FF] text-blue-500 border-blue-100' : 'bg-white-500 text-black-500 border-transparent'"
 >

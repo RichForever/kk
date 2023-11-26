@@ -1,14 +1,19 @@
 <div class="flex flex-col gap-12 text-center card md:text-left lg:flex-col lg:gap-8">
     <div>
         <div class="overflow-hidden rounded-lg card__image">
-            <a href="{{ post.link }}" class="group">
-                <img src="//fakeimg.pl/378x264" alt="" class="h-auto w-full rounded-lg transition duration-150 ease-in-out-circ group-hover:scale-125">
+            <a href="{{ post.link }}" class="group" title="Przeczytaj artykuł {{ post.title }}">
+{#                <img src="//fakeimg.pl/378x264" alt="" class="h-auto w-full rounded-lg transition duration-150 ease-in-out-circ group-hover:scale-125">#}
+                {% include 'atoms/image.twig' with {
+                    'imageItem': post.thumbnail,
+                    'imageSize': 'image-480',
+                    'customClass': 'h-auto w-full rounded-lg transition duration-150 ease-in-out-circ group-hover:scale-125'
+                } %}
             </a>
         </div>
     </div>
     <div>
         <div class="flex flex-col items-center gap-4 card__meta md:mb-2 md:items-baseline">
-            <div class="inline-block flex items-center justify-center gap-2 font-bold text-blue-400 md:justify-start">
+            <div class="inline-block flex items-center justify-center gap-2 font-bold text-black-500 md:justify-start">
                 {{ function('wpstarter_get_icon', 'icon-tag-small') }}
                 {% for category in post.categories %}
                     <span class="border-r border-solid border-blue-200 pr-2 text-sm font-regular last:border-0 last:pr-0">{{ category }}</span>
@@ -19,7 +24,7 @@
             </div>
         </div>
         <div class="mb-6 flex flex-col gap-4 card__content">
-            <a href="{{ post.link }}" class="group">
+            <a href="{{ post.link }}" class="group" title="Przeczytaj artykuł {{ post.title }}">
                 <h3 class="mb-2 text-lg font-extrabold text-black-500 group-hover:text-blue-500 group-hover:underline">{{ post.title }}</h3>
             </a>
             <p>{{ post.excerpt }}</p>

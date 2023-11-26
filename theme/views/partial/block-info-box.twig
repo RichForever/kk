@@ -8,7 +8,7 @@
     </div>
     {% if box.link.label and box.link.url %}
         <div class="box__footer">
-            <a href="{{ box.link.url }}" class="inline-flex items-center gap-2 text-base font-semibold text-blue-500 group-hover:text-white-500 hover:underline">
+            <a href="{{ box.link.url }}" class="inline-flex items-center gap-2 text-base font-semibold text-blue-500 group-hover:text-white-500 hover:underline" title="Przejdź do podstrony na temat {{ box.title }}">
                 {{ box.link.label }}
                 {{ function('wpstarter_get_icon', 'icon-arrow-small') }}
             </a>

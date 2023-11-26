@@ -1,7 +1,7 @@
 .footer {
   &__widget {
-    h5 {
-      @apply text-base font-bold 2xl:text-md mb-4;
+    h3 {
+      @apply text-base font-bold 2xl:text-base mb-4;
     }
     img {
       @apply inline-block mb-6 xl:mb-9;

@@ -12,7 +12,11 @@
             </div>
             {% if fields.image %}
                 <div class="lg:w-6/12">
-                    <img src="{{ fields.image.url }}" alt="" class="block h-auto w-full">
+                    {% include 'atoms/image.twig' with {
+                        'imageItem': fields.image,
+                        'imageSize': 'image-960',
+                        'customClass': 'block h-auto w-full'
+                    } %}
                 </div>
             {% endif %}
         </div>

@@ -5,7 +5,7 @@
     <div class="container items-center py-20 xl:py-32 rounded-lg text-center md:text-left {{ boxedClass }}">
         <div class="flex flex-col gap-12 2xl:gap-20">
             <div class="text-center lg:mx-auto lg:w-8/12">
-                {% include 'partial/block-section-subtitle.twig' with {
+                {% include 'atoms/section-subtitle-pill.twig' with {
                     'content': fields.subtitle
                 } %}
                 <InnerBlocks

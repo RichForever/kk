@@ -4,8 +4,8 @@
      'id' => 'footer_widget_1',
      'before_widget' => '',
      'after_widget' => '',
-     'before_title' => '<h5>',
-     'after_title' => '</h5>',
+     'before_title' => '<h3>',
+     'after_title' => '</h3>',
  ) );
 
 register_sidebar( array(
@@ -13,8 +13,8 @@ register_sidebar( array(
     'id' => 'footer_widget_2',
     'before_widget' => '',
     'after_widget' => '',
-    'before_title' => '<h5>',
-    'after_title' => '</h5>',
+    'before_title' => '<h3>',
+    'after_title' => '</h3>',
 ) );
 
 register_sidebar( array(
@@ -22,6 +22,6 @@ register_sidebar( array(
     'id' => 'footer_widget_3',
     'before_widget' => '',
     'after_widget' => '',
-    'before_title' => '<h5>',
-    'after_title' => '</h5>',
+    'before_title' => '<h3>',
+    'after_title' => '</h3>',
 ) );

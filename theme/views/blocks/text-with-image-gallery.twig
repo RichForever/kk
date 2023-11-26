@@ -1,0 +1,43 @@
+{% set blockBackground = 'is-style-dark' in block.customClass or 'is-style-dark-inverted' in block.customClass ? 'bg-gradient-to-br from-[#092342] to-[#06172D]' : 'bg-[#F5F9FF]' %}
+
+{% set reversedClass = '' %}
+{% if 'is-style-dark-inverted' in block.customClass or 'is-style-light-inverted' in block.customClass %}
+    {% set reversedClass = 'lg:flex-row-reverse' %}
+{% else %}
+    {% set reversedClass = 'lg:flex-row' %}
+{% endif %}
+
+<section class="kk-block section px-4 {{ block.customClass }} {{ blockBackground }}" {{ block.anchor }}
+         data-block="{{ block.name|replace({'kk/': ''}) }}">
+    <div class="container items-center py-20 xl:py-32 rounded-lg text-center lg:text-left">
+        <div class="flex flex-col gap-12 2xl:gap-20">
+            <div class="gap-12 flex flex-col-reverse {{ reversedClass }} lg:items-center lg:justify-between xl:gap-32">
+                <div class="lg:w-7/12 xl:w-6/12">
+                    {% include 'atoms/section-subtitle-pill.twig' with {
+                        'content': fields.subtitle
+                    } %}
+                    <InnerBlocks
+                            allowedBlocks="{{ allowed_blocks | json_encode() | escape('html_attr') }}"
+                            template="{{ allowed_blocks_template | json_encode() | escape('html_attr') }}"
+                    />
+                </div>
+                {% if fields.image %}
+                    <div class="lg:w-5/12">
+                        {% include 'atoms/image.twig' with {
+                            'imageItem': fields.image,
+                            'imageSize': 'image-420',
+                            'customClass': 'block h-auto w-full'
+                        } %}
+                    </div>
+                {% endif %}
+            </div>
+            {% if fields.gallery %}
+                <div class="flex flex-col gap-5 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-4">
+                    {% for item in fields.gallery %}
+                        {% include 'partial/block-gallery-item.twig' %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>

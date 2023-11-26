@@ -1,10 +1,13 @@
 @use "~blocks/contact/editor" as contact;
 @use "~blocks/cta/editor" as cta;
 @use "~blocks/faq/editor" as faq;
+@use "~blocks/hero/editor" as hero;
 @use "~blocks/info-boxes/editor" as infoboxes;
 @use "~blocks/page-title/editor" as pagetitle;
 @use "~blocks/recent-posts/editor" as recentposts;
+@use "~blocks/spacer/editor" as spacer;
 @use "~blocks/text-with-image/editor" as textwithimage;
+@use "~blocks/text-with-image-gallery/editor" as textwithimagegallery;
 
 @use "base" as base;
 @use "components" as components;

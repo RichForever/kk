@@ -1,0 +1,10 @@
+<div class="w-full relative">
+    <a href="{{ get_image(item) }}" class="glightbox text-blue-500 inline-block bg-white-500 p-3 rounded-lg absolute top-3 lg:top-4 right-3 lg:right-4" data-gallery="gallery-{{ block.id }}" aria-label="Click to zoom image">
+        {{ function('wpstarter_get_icon', 'icon-zoom') }}
+    </a>
+    {% include 'atoms/image.twig' with {
+        'imageItem': item,
+        'imageSize': 'image-480-square',
+        'customClass': 'w-full h-auto rounded-lg object-cover aspect-square'
+    } %}
+</div>

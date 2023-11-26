@@ -6,7 +6,7 @@
 {% endif %}
 
 {% set reversedClass = '' %}
-{% if 'is-style-inverted' in block.customClass or 'is-style-boxed-inverted' in block.customClass %}
+{% if 'is-style-default-inverted' in block.customClass or 'is-style-boxed-inverted' in block.customClass %}
     {% set reversedClass = 'lg:flex-row-reverse' %}
 {% else %}
     {% set reversedClass = 'lg:flex-row' %}
@@ -17,7 +17,7 @@
     <div class="container items-center py-20 xl:py-32 rounded-lg text-center lg:text-left {{ boxedClass }}">
         <div class="gap-12 flex flex-col-reverse {{ reversedClass }} lg:items-center lg:justify-between xl:gap-32">
             <div class="lg:w-7/12 xl:w-6/12">
-                {% include 'partial/block-section-subtitle.twig' with {
+                {% include 'atoms/section-subtitle-pill.twig' with {
                     'content': fields.subtitle
                 } %}
                 <InnerBlocks
@@ -27,7 +27,11 @@
             </div>
             {% if fields.image %}
                 <div class="lg:w-5/12">
-                    <img src="{{ fields.image.url }}" alt="" class="h-auto w-full">
+                    {% include 'atoms/image.twig' with {
+                        'imageItem': fields.image,
+                        'imageSize': 'image-640',
+                        'customClass': 'block h-auto w-full'
+                    } %}
                 </div>
             {% endif %}
         </div>

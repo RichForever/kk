@@ -14,7 +14,8 @@ const blockNames = [
   "text-with-image",
   "faq",
   "page-title",
-  "hero"
+  "hero",
+  "text-with-image-gallery"
 ];
 
 for (const item of blockNames) {

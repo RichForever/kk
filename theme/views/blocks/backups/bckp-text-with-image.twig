@@ -25,7 +25,7 @@
     <div class="container items-center py-20 xl:py-32 rounded-lg text-center lg:text-left {{ boxedClass }}">
         <div class="gap-4 flex flex-col-reverse items-center lg:grid lg:grid-cols-12 lg:items-center lg:grid-flow-dense">
             <div class="{{ invertedClassFirst }}">
-                {% include 'partial/block-section-subtitle.twig' with {
+                {% include 'atoms/section-subtitle-pill.twig' with {
                     'content': fields.subtitle
                 } %}
                 <InnerBlocks
@@ -35,7 +35,11 @@
             </div>
             {% if fields.image %}
                 <div class="{{ invertedClassSecond }}">
-                    <img src="{{ fields.image.url }}" alt="" class="">
+                    {% include 'atoms/image.twig' with {
+                        'imageItem': fields.image,
+                        'imageSize': 'image-420',
+                        'customClass': 'w-full h-auto'
+                    } %}
                 </div>
             {% endif %}
         </div>

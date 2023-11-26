@@ -75,6 +75,10 @@ class wpstarter extends Timber\Site {
 	}
 
 	public function register_images() {
+		require_once "lib/images.php";
+	}
+
+	public function register_svg_support() {
 		require_once "lib/svg-support.php";
 	}
 

@@ -1,0 +1,11 @@
+{% set image = get_image(imageItem) %}
+<img
+        src="{{ image.src(imageSize) }}"
+        srcset="{{ image.srcset }}"
+        sizes="{{ image.img_sizes }}"
+        alt="{{ image.alt }}"
+        width="{{ image.width }}"
+        height="{{ image.height }}"
+        class="{{ customClass }}"
+        loading="eager"
+>

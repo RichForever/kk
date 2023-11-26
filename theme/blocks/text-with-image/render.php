@@ -1,6 +1,6 @@
 <?php
 
-$allowedBlocks = ['core/heading', 'core/paragraph', 'core/button'];
+$allowedBlocks = ['core/heading', 'core/paragraph', 'core/button', 'core/list'];
 $template = [
     ['core/heading',
         [

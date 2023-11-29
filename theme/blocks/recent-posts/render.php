@@ -1,11 +1,12 @@
 <?php
 
-$allowedBlocks = ['core/heading', 'core/paragraph'];
+$allowedBlocks = ['core/heading', 'core/paragraph', 'core/button'];
 $template = [
     ['core/heading',
         [
             'level' => 2,
             'content' => 'Strefa wiedzy',
+            'className' => 'mb-0'
         ]
     ],
     ['core/paragraph',

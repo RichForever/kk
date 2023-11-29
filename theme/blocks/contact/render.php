@@ -6,6 +6,7 @@ $template = [
         [
             'level' => 2,
             'content' => 'Kontakt',
+	        'className' => 'mb-0'
         ]
     ],
     ['core/paragraph',

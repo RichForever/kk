@@ -6,7 +6,7 @@ $template = [
         [
             'level' => 1,
             'content' => 'Rozwiązuję problemy',
-            'className' => 'text-white-500'
+            'className' => 'text-white-500',
         ]
     ],
     ['core/heading',

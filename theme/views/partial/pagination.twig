@@ -1,51 +1,37 @@
 {% if posts.pagination.pages is not empty %}
-    <nav class="mt-10 flex items-center justify-between border-t border-gray-200 px-4 sm:px-0">
-        <div class="flex w-0 flex-1">
-            {% if posts.pagination.prev %}
-                <a href="{{ posts.pagination.prev.link }}" class="-mt-px inline-flex items-center border-t-2 border-transparent pt-4 pr-1 text-lg font-medium leading-5 text-indigo-700 transition duration-150 ease-in-out hover:text-indigo-700-alt hover:border-indigo-700 focus:border-gray-400 focus:text-gray-700 focus:outline-none">
-                    <svg class="mr-3 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd" />
-                    </svg>
-                    Previous
-                </a>
-            {% else %}
-                <a href="#" class="-mt-px inline-flex items-center border-t-2 border-transparent pt-4 pr-1 text-lg font-medium leading-5 text-gray-300 transition duration-150 ease-in-out hover:border-gray-300 hover:text-gray-700 focus:border-gray-400 focus:text-gray-700 focus:outline-none">
-                    <svg class="mr-3 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd" />
-                    </svg>
-                    Previous
-                </a>
-            {% endif %}
+<nav aria-label="Blog pagination" class="">
+    <div class="grid grid-cols-2 grid-rows-2 md:flex items-center gap-4 text-base">
+        {% if posts.pagination.prev %}
+        <div class="row-start-2 row-span-1 col-start-1 col-span-1">
+            <a href="{{ posts.pagination.prev.link }}" class="flex items-center justify-center px-8 h-10 ms-0 leading-tight text-blue-500 bg-white border-2 border-blue-500 rounded-lg hover:bg-blue-100 hover:text-blue-500">
+                <span class="sr-only">Poprzednia strona</span>
+                <div class="rotate-180">
+                    {{ function('wpstarter_get_icon', 'icon-arrow-small') }}
+                </div>
+            </a>
         </div>
-        <div class="hidden md:flex">
+        {% endif %}
+        <div class="row-start-1 row-span-1 col-start-1 col-span-2 flex items-center justify-center gap-2">
             {% for page in posts.pagination.pages %}
                 {% if page.link %}
-                    <a href="{{ page.link }}" class="-mt-px inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-lg font-medium leading-5 text-gray-500 transition duration-150 ease-in-out hover:text-indigo-700-alt hover:border-gray-400 focus:border-gray-400 focus:text-gray-700 focus:outline-none">
-                    {{ page.title }}
+                    <a href="{{ page.link }}" class="flex items-center justify-center px-4 h-10 rounded-lg leading-tight font-semibold text-blue-500 bg-white border-2 border-blue-500 hover:bg-blue-100 hover:text-blue-500">
+                        {{ page.title }}
                     </a>
                 {% else %}
-                    <a href="{{ page.link }}" class="-mt-px inline-flex items-center border-t-2 border-indigo-700 px-4 pt-4 text-lg font-medium leading-5 text-indigo-700 transition duration-150 ease-in-out hover:text-indigo-700-alt hover:border-gray-400 focus:border-gray-400 focus:text-gray-700 focus:outline-none">
-                    {{ page.title }}
+                    <a href="{{ page.link }}" aria-current="page" class="z-10 flex items-center justify-center px-4 h-10 rounded-lg leading-tight font-semibold text-white-500 border-2 border-blue-500 bg-blue-500 hover:bg-blue-600 hover:text-white-500">
+                        {{ page.title }}
                     </a>
                 {% endif %}
             {% endfor %}
         </div>
-        <div class="flex w-0 flex-1 justify-end">
-            {% if posts.pagination.next %}
-                <a href="{{ posts.pagination.next.link }}" class="-mt-px inline-flex items-center border-t-2 border-transparent pt-4 pl-1 text-lg font-medium leading-5 text-indigo-700 transition duration-150 ease-in-out hover:text-indigo-700-alt hover:border-indigo-700 focus:border-gray-400 focus:text-gray-700 focus:outline-none">
-                    Next
-                    <svg class="ml-3 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
-                </a>
-            {% else %}
-                <a href="#" class="-mt-px inline-flex items-center border-t-2 border-transparent pt-4 pl-1 text-lg font-medium leading-5 text-gray-300 transition duration-150 ease-in-out hover:border-gray-300 hover:text-gray-700 focus:border-gray-400 focus:text-gray-700 focus:outline-none">
-                    Next
-                    <svg class="ml-3 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
-                </a>
-            {% endif %}
+        {% if posts.pagination.next %}
+        <div class="row-start-2 row-span-1 col-start-2 col-span-1">
+            <a href="{{ posts.pagination.next.link }}" class="flex items-center justify-center px-8 h-10 leading-tight text-blue-500 bg-white border-2 border-blue-500 rounded-lg hover:bg-blue-100 hover:text-blue-500">
+                <span class="sr-only">Następna strona</span>
+                {{ function('wpstarter_get_icon', 'icon-arrow-small') }}
+            </a>
         </div>
-    </nav>
+        {% endif %}
+    </div>
+</nav>
 {% endif %}

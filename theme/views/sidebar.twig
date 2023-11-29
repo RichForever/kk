@@ -1,1 +1,33 @@
-Sidebar in Timber. Add HTML to your hearts content.
+<div class="flex flex-col gap-12 divide-y divide-blue-100 bg-[#F5F9FF] rounded-lg p-6 lg:p-0 lg:bg-transparent">
+    <div class="flex flex-col gap-8">
+        <h4 class="text-black-500 font-extrabold text-lg">Ostatnie wpisy</h4>
+        <div class="flex flex-col gap-6">
+            {% for post in recent_posts %}
+                {% include 'partial/post-tease-small.twig' %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="flex flex-col gap-8 pt-12">
+        <h4 class="text-black-500 font-extrabold text-lg">Szukaj</h4>
+        <div>
+            {% include 'searchform.twig' %}
+        </div>
+    </div>
+    <div class="flex flex-col gap-8 pt-12">
+        <h4 class="text-black-500 font-extrabold text-lg">Kategorie</h4>
+        <div>
+            <ul class="flex flex-col gap-6">
+                {% for category in categories %}
+                    <li>
+                        <a href="{{ category.link }}" class="w-full flex justify-between items-center group">
+                            <span class="text-black-500 font-semibold text-base group-hover:text-blue-500 group-hover:underline">{{ category.title }}</span>
+                            <span class="inline-block text-blue-500 bg-blue-100 p-2 font-bold text-sm rounded h-6 flex items-center">
+                                {{ category.count }}
+                            </span>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

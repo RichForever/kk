@@ -1,0 +1,17 @@
+<article class="flex flex-row gap-4 text-left items-start">
+    <div class="overflow-hidden rounded-lg card__image aspect-square w-3/12">
+        <a href="{{ post.link }}" class="group" title="Przeczytaj artykuł {{ post.title }}">
+            {% include 'atoms/image.twig' with {
+                'imageItem': post.thumbnail,
+                'imageSize': 'image-480',
+                'customClass': 'h-full w-full object-cover rounded-lg transition duration-150 ease-in-out-circ group-hover:scale-125'
+            } %}
+        </a>
+    </div>
+    <div class="w-9/12">
+        <span class="text-sm font-regular text-black-300">{{ post.date|replace({',': ''}) }}</span>
+        <a href="{{ post.link }}" class="group" title="Przeczytaj artykuł {{ post.title }}">
+            <h5 class="text-base font-extrabold text-black-500 group-hover:text-blue-500 group-hover:underline">{{ post.title }}</h5>
+        </a>
+    </div>
+</article>

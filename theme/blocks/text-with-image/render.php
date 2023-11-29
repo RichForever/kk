@@ -6,6 +6,7 @@ $template = [
         [
             'level' => 2,
             'content' => 'O mnie',
+            'className' => 'mb-0'
         ]
     ],
     ['core/paragraph',

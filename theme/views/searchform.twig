@@ -1,0 +1,18 @@
+<form role="search" method="get" id="searchform" class="searchform" action="{{site.link}}">
+    <div class="flex gap-4">
+        <label class="sr-only" for="s">Szukaj</label>
+        <input type="text" value="{{ function('get_search_query') }}" placeholder="Wpisz szukaną frazę" name="s" id="s" class="p-4 rounded-lg border-blue-100 w-full" />
+        <input type="hidden" name="post_type" value="post" />
+
+        <div class="text-white-500">
+            <button
+                type="submit"
+                id="searchsubmit"
+                class="bg-blue-500 text-white-500 p-4 rounded-lg inline-block cursor-pointer hover:bg-blue-600 w-fit h-full"
+            >
+                <span class="sr-only">Szukaj</span>
+                {{ function('wpstarter_get_icon', 'icon-search') }}
+            </button>
+        </div>
+    </div>
+</form>

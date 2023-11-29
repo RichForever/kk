@@ -6,6 +6,7 @@ $template = [
         [
             'level' => 3,
             'content' => 'Potrzebujesz pomocy prawnej?',
+            'className' => 'mb-0'
         ]
     ],
     ['core/paragraph',

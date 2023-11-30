@@ -19,5 +19,3 @@ add_theme_support('editor-styles');
 // register editor styles
 $mixPublicPath = get_template_directory() . '/dist';
 add_editor_style(get_template_directory_uri() . '/dist/' . mix("editor.css", $mixPublicPath));
-
-

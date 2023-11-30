@@ -1,6 +1,4 @@
 /* theme custom styles here */
 @use "base" as base;
 @use "components" as components;
-
-@use "layout/navbar" as navbar;
-@use "layout/footer" as footer;
+@use "layout" as layout;

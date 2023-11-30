@@ -1,3 +1,4 @@
-.kk-block ul {
+.kk-block ul,
+.wp-block-post-content ul {
   @apply list-disc list-inside marker:text-blue-500 text-base;
 }

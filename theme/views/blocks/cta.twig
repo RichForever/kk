@@ -1,6 +1,6 @@
-{% set blockBackground = 'is-style-dark' in block.customClass ? 'bg-gradient-to-br from-[#092342] to-[#06172D]' : 'bg-[#F5F9FF]' %}
+{% set blockBackground = 'is-style-dark' in block.customClass ? 'bg-gradient-to-br from-[#092342] to-[#06172D]' : 'bg-blue-50' %}
 
-<section class="kk-block section px-4 {{ block.customClass }}" {{ block.anchor }}
+<section class="kk-block section px-4 lg:px-8 {{ block.customClass }}" {{ block.anchor }}
          data-block="{{ block.name|replace({'kk/': ''}) }}">
     <div class="container rounded-lg text-center relative {{ blockBackground }}">
         <div class="background-squares">
@@ -11,7 +11,7 @@
                  alt=""
                  class="absolute bottom-0 left-0 h-1/2 sm:h-3/4 lg:h-full">
         </div>
-        <div class="px-16 py-20 lg:px-20 xl:p-32 2xl:px-56">
+        <div class="px-8 py-20 lg:px-20 xl:p-32 2xl:px-56 relative z-10">
             {% include 'atoms/section-subtitle-pill.twig' with {
                 'content': fields.subtitle
             } %}

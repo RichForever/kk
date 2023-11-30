@@ -1,13 +1,13 @@
 <button class="relative navbar__hamburger lg:hidden" aria-label="Open menu" @click="open = !open">
-    <div class="relative flex overflow-hidden items-center justify-center w-[50px] h-[50px] transform transition-all {{ fixed_menu ? 'bg-white-500' : 'bg-[#F5F9FF]' }} duration-200 rounded-lg">
+    <div class="relative flex overflow-hidden items-center justify-center w-[50px] h-[50px] transform transition-all {{ fixed_menu ? 'bg-white-500' : 'bg-blue-50' }} duration-300 rounded-lg">
         <div class="flex origin-center transform flex-col justify-around overflow-hidden transition-all duration-300 w-[20px] h-[20px]">
             <span class="w-7 origin-left transform bg-blue-500 transition-all duration-300 h-[2px] span__item"></span>
             <span class="w-7 transform rounded bg-blue-500 transition-all delay-75 duration-300 h-[2px] span__item"></span>
             <span class="w-7 origin-left transform bg-blue-500 transition-all delay-150 duration-300 h-[2px] span__item"></span>
 
-            <div class="absolute flex w-0 -translate-x-10 transform items-center justify-between transition-all duration-500 top-2.5 navbar__close">
-                <span class="absolute w-5 rotate-0 transform bg-blue-500 transition-all delay-200 duration-500 h-[2px]"></span>
-                <span class="absolute w-5 -rotate-0 transform bg-blue-500 transition-all delay-200 duration-500 h-[2px]"></span>
+            <div class="absolute flex w-0 -translate-x-10 transform items-center justify-between transition-all duration-300 top-2.5 navbar__close">
+                <span class="absolute w-5 rotate-0 transform bg-blue-500 transition-all delay-200 duration-300 h-[2px]"></span>
+                <span class="absolute w-5 -rotate-0 transform bg-blue-500 transition-all delay-200 duration-300 h-[2px]"></span>
             </div>
         </div>
     </div>

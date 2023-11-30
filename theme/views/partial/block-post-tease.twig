@@ -1,10 +1,10 @@
-<article class="flex flex-col gap-12 text-center md:text-left lg:flex-col lg:gap-8">
+<article class="flex flex-col gap-8 text-center md:text-left lg:gap-8">
     <div class="overflow-hidden rounded-lg card__image">
         <a href="{{ post.link }}" class="group" title="Przeczytaj artykuł {{ post.title }}">
             {% include 'atoms/image.twig' with {
                 'imageItem': post.thumbnail,
                 'imageSize': 'image-480',
-                'customClass': 'h-auto w-full rounded-lg transition duration-150 ease-in-out-circ group-hover:scale-125'
+                'customClass': 'h-auto w-full rounded-lg transition-all duration-300 group-hover:scale-110'
             } %}
         </a>
     </div>
@@ -22,9 +22,9 @@
         </div>
         <div class="mb-6 flex flex-col gap-4 card__content">
             <a href="{{ post.link }}" class="group" title="Przeczytaj artykuł {{ post.title }}">
-                <h3 class="mb-2 text-xl font-extrabold text-black-500 group-hover:text-blue-500 group-hover:underline {{ titleSize ? 'lg:text-' ~ titleSize : '' }}">{{ post.title }}</h3>
+                <h3 class="mb-2 text-lg font-extrabold text-black-500 group-hover:text-blue-500 group-hover:underline {{ titleSize ? 'lg:text-' ~ titleSize : '' }}">{{ post.title }}</h3>
             </a>
-            <p>{{ post.excerpt }}</p>
+            <p>{{ post.excerpt({read_more: false}) }}</p>
         </div>
         <div class="text-base font-semibold text-blue-500 card__footer">
             <a href="{{ post.link }}" class="inline-flex items-center gap-2 hover:underline">

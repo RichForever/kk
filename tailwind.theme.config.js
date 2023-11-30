@@ -4,8 +4,16 @@ module.exports = {
    "container": {
       "center": true,
    },
+   "backgroundSize": {
+      'size-200': '200% 200%',
+   },
+   "backgroundPosition": {
+      'pos-0': '0% 0%',
+      'pos-100': '100% 100%',
+   },
    "colors": {
       "blue": {
+         "50": '#F5F9FF',
          "100": "#d4e3f7",
          "200": "#a5c5ee",
          "300": "#79a9e6",

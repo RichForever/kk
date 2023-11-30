@@ -1,4 +1,4 @@
-{% set blockBackground = 'is-style-dark' in block.customClass or 'is-style-dark-inverted' in block.customClass ? 'bg-gradient-to-br from-[#092342] to-[#06172D]' : 'bg-[#F5F9FF]' %}
+{% set blockBackground = 'is-style-dark' in block.customClass or 'is-style-dark-inverted' in block.customClass ? 'bg-gradient-to-br from-[#092342] to-[#06172D]' : 'bg-blue-50' %}
 
 {% set reversedClass = '' %}
 {% if 'is-style-dark-inverted' in block.customClass or 'is-style-light-inverted' in block.customClass %}
@@ -7,7 +7,7 @@
     {% set reversedClass = 'lg:flex-row' %}
 {% endif %}
 
-<section class="kk-block section px-4 {{ block.customClass }} {{ blockBackground }}" {{ block.anchor }}
+<section class="kk-block section px-4 lg:px-8 {{ block.customClass }} {{ blockBackground }}" {{ block.anchor }}
          data-block="{{ block.name|replace({'kk/': ''}) }}">
     <div class="container items-center py-20 xl:py-32 rounded-lg text-center lg:text-left">
         <div class="flex flex-col gap-12 2xl:gap-20">

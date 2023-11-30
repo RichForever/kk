@@ -17,9 +17,13 @@
 @tailwind utilities;
 
 html :where(.wp-block) {
-  max-width: 1200px;
+  max-width: 1440px !important;
+}
+
+.is-root-container {
+  @apply space-y-4;
 }
 
 h1.wp-block-post-title {
-  @apply text-4xl font-bold;
+  @apply text-4xl font-bold mb-12;
 }

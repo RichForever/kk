@@ -1,5 +1,24 @@
 {% extends "base.twig" %}
 
 {% block content %}
-    {{ post.content }}
+    <div class="section px-4 lg:px-8">
+        <div class="container py-12 mt-4 xl:py-32 xl:pt-12 border-t border-blue-100">
+            <div class="flex flex-col gap-12 lg:flex-row lg:justify-between lg:gap-16 xl:gap-36">
+
+                <div class="lg:w-8/12 flex flex-col gap-20">
+
+                    {% include 'partial/post-tease-single.twig' %}
+
+                    <div class="prose prose-blue max-w-full w-full">
+                        {{ post.content }}
+                    </div>
+                </div>
+
+                <div class="lg:w-4/12">
+                    {% include 'sidebar.twig' %}
+                </div>
+
+            </div>
+        </div>
+    </div>
 {% endblock %}

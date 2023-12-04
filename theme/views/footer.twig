@@ -20,12 +20,12 @@
 </footer>
 
 <button
-    id="scrollUp"
-    class="fixed right-6 bottom-6"
-    style="display: none;"
-    x-data
-    @click="window.scrollTo({top: 0, behavior: 'smooth'})"
-    @click.stop
+        id="scrollUp"
+        class="fixed right-6 bottom-6"
+        style="display: none;"
+        x-data
+        @click="window.scrollTo({top: 0, behavior: 'smooth'})"
+        @click.stop
 >
     <span class="sr-only">Kliknij i przewiń stronę na górę</span>
     <div class="absolute z-10 h-10 w-10 rounded-full bg-blue-100 scrollUp__inner top-[2px] left-[2px] lg:h-12 lg:w-12 2xl:w-[58px] 2xl:h-[58px]">

@@ -10,7 +10,10 @@
   "acf": {
     "mode": "preview",
     "renderTemplate": "render.php",
-    "postTypes": [ "post", "page" ]
+    "postTypes": [
+      "post",
+      "page"
+    ]
   },
   "supports": {
     "anchor": true

@@ -1,6 +1,7 @@
-<section id="block__{{ block.id }}" class="kk-block section px-4 relative {{ block.customClass }} bg-gradient-to-br from-[#092342] to-[#06172D]" {{ block.anchor }}
+<section id="block__{{ block.id }}"
+         class="kk-block section px-4 relative {{ block.customClass }} bg-gradient-to-br from-[#092342] to-[#06172D]" {{ block.anchor }}
          data-block="{{ block.name|replace({'kk/': ''}) }}">
-    <div class="container items-center rounded-lg text-center py-20 xl:py-32">
+    <div class="container items-center rounded-lg py-20 text-center xl:py-32">
         <div class="background-squares">
             <img src="{{ theme.link }}/assets/images/sqaures-top-light.svg"
                  alt=""
@@ -8,7 +9,8 @@
         </div>
         <div class="relative text-left lg:w-10/12">
             {% block title %}<h1 class="text-white-500">{{ post.title }}</h1>{% endblock %}
-            {% block subtitle %}<h2 class="text-blue-100 text-md font-normal">Krzysztof Andrzej Kaczmarek radca prawy</h2>{% endblock %}
+            {% block subtitle %}<h2 class="font-normal text-blue-100 text-md">Krzysztof Andrzej Kaczmarek radca
+                prawy</h2>{% endblock %}
         </div>
     </div>
 </section>

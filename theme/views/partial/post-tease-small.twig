@@ -1,5 +1,5 @@
-<article class="flex flex-row gap-4 text-left items-start">
-    <div class="overflow-hidden rounded-lg card__image aspect-square w-3/12">
+<article class="flex flex-row items-start gap-4 text-left">
+    <div class="aspect-square w-3/12 overflow-hidden rounded-lg card__image">
         <a href="{{ post.link }}" class="group" title="Przeczytaj artykuł {{ post.title }}">
             {% include 'atoms/image.twig' with {
                 'imageItem': post.thumbnail,

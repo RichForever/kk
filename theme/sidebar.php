@@ -6,4 +6,5 @@
  * @since wpstarter 1.0
  */
 
-Timber::render( array( 'sidebar.twig' ), $data );
+$context = Timber::context();
+Timber::render( 'sidebar.twig', $context );

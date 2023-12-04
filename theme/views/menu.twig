@@ -1,12 +1,12 @@
 {% if main_menu %}
-    <ul class="font-semibold flex flex-col lg:flex-row lg:space-x-6 lg:items-center">
+    <ul class="flex flex-col font-semibold lg:space-x-6 lg:flex-row lg:items-center">
         {% for item in items %}
             <li class="{{ item.classes | join(' ') }}">
                 <a
-                    @click="open = false"
-                    target="{{ item.target }}"
-                    href="{{ item.link }}"
-                    class="block p-3 text-black-500 {{ fixed_menu ? 'lg:text-white-500 lg:hover:text-blue-200' : 'lg:text-black-500 lg:hover:text-blue-500' }} rounded-lg hover:bg-blue-500 hover:text-white-500 lg:hover:bg-transparent lg:border-0 lg:hover:underline lg:p-0"
+                        @click="open = false"
+                        target="{{ item.target }}"
+                        href="{{ item.link }}"
+                        class="block p-3 text-black-500 {{ fixed_menu ? 'lg:text-white-500 lg:hover:text-blue-200' : 'lg:text-black-500 lg:hover:text-blue-500' }} rounded-lg hover:bg-blue-500 hover:text-white-500 lg:hover:bg-transparent lg:border-0 lg:hover:underline lg:p-0"
                 >{{ item.title }}</a>
                 {% if item.children %}
                     {% include "menu.twig" with {'items': item.children} %}

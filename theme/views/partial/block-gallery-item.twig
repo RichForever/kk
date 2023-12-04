@@ -1,9 +1,9 @@
-<div class="w-full relative">
+<div class="relative w-full">
     <a
-        href="{{ get_image(item) }}"
-        class="glightbox text-blue-500 inline-block bg-white-500 p-3 rounded-lg absolute top-3 lg:top-4 right-3 lg:right-4 hover:bg-blue-50 transition-all duration-300"
-        data-gallery="gallery-{{ block.id }}"
-        aria-label="Click to zoom image"
+            href="{{ get_image(item) }}"
+            class="absolute top-3 right-3 inline-block rounded-lg p-3 text-blue-500 transition-all duration-300 glightbox bg-white-500 hover:bg-blue-50 lg:top-4 lg:right-4"
+            data-gallery="gallery-{{ block.id }}"
+            aria-label="Click to zoom image"
     >
         {{ function('wpstarter_get_icon', 'icon-zoom') }}
     </a>

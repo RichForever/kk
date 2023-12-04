@@ -6,13 +6,10 @@
  * @since wpstarter 1.0
  */
 
-$context         = Timber::context();
-$timber_post     = Timber::get_post();
-$context['post'] = $timber_post;
-$context['categories'] = Timber::get_terms('category', array('hide_empty' => false));
-$context['recent_posts'] = Timber::get_posts([
-	'posts_per_page' => 3
-]);
+$context               = Timber::context();
+$timber_post           = Timber::get_post();
+$context['post']       = $timber_post;
+$context['categories'] = Timber::get_terms( 'category', array( 'hide_empty' => false ) );
 
 if ( post_password_required( $timber_post->ID ) ) {
 	Timber::render( 'single-password.twig', $context );

@@ -10,14 +10,29 @@
   "acf": {
     "mode": "preview",
     "renderTemplate": "render.php",
-    "postTypes": [ "post", "page" ]
+    "postTypes": [
+      "post",
+      "page"
+    ]
   },
   "styles": [
-    { "name": "dark", "label": "Dark", "isDefault": true },
-    { "name": "light", "label": "Light" },
-    { "name": "dark-inverted", "label": "Dark Inverted" },
-    { "name": "light-inverted", "label": "Light Inverted" }
-
+    {
+      "name": "dark",
+      "label": "Dark",
+      "isDefault": true
+    },
+    {
+      "name": "light",
+      "label": "Light"
+    },
+    {
+      "name": "dark-inverted",
+      "label": "Dark Inverted"
+    },
+    {
+      "name": "light-inverted",
+      "label": "Light Inverted"
+    }
   ],
   "supports": {
     "anchor": true

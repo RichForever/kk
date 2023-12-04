@@ -1,24 +1,29 @@
 <!doctype html>
-<html {{site.language_attributes}} class="scroll-smooth {{ page == '404' ? 'h-full' : '' }}">
+<html {{ site.language_attributes }} class="scroll-smooth {{ page == '404' ? 'h-full' : '' }}">
 <head>
-    <meta charset="{{ site.charset }}" />
+    <meta charset="{{ site.charset }}"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Description here">
-    <link rel="pingback" href="{{ site.pingback_url }}" />
-    {{function('wp_head')}}
+    <link rel="pingback" href="{{ site.pingback_url }}"/>
+    {{ function('wp_head') }}
+    <style>
+        [x-cloak] {
+            display: none;
+        }
+    </style>
 </head>
 
-<body class="{{body_class}} {{ page == '404' ? 'h-full' : '' }}" data-template="base.twig">
-    {{ function('wp_body_open') }}
-    {% include 'header.twig' %}
+<body class="{{ body_class }} {{ page == '404' ? 'h-full' : '' }}" data-template="base.twig">
+{{ function('wp_body_open') }}
+{% include 'header.twig' %}
 
-    {% block content %}
+{% block content %}
     Sorry, no content
-    {% endblock %}
+{% endblock %}
 
-    {% block footer %}
-        {% include 'footer.twig' %}
-        {{ function('wp_footer') }}
-    {% endblock %}
+{% block footer %}
+    {% include 'footer.twig' %}
+    {{ function('wp_footer') }}
+{% endblock %}
 </body>
 </html>

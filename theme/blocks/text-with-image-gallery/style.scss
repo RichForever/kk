@@ -4,15 +4,17 @@
   h1, h2, h3, h4, h5, h6 {
     @apply text-black-500;
   }
+
   p {
     @apply text-black-300;
   }
 
   &.is-style-dark,
-  &.is-style-dark-inverted{
+  &.is-style-dark-inverted {
     h1, h2, h3, h4, h5, h6 {
       @apply text-white-500;
     }
+
     p {
       @apply text-blue-100;
     }

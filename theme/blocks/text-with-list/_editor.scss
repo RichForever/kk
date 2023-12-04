@@ -1,1 +1,9 @@
 @use "style";
+
+.kk-block.text-with-list h2,
+.kk-block.text-with-list .wp-block-button,
+.kk-block.text-with-list .wp-block-paragraph,
+.kk-block.text-with-list .wp-block-list {
+  margin-left: 0;
+  margin-right: 0;
+}

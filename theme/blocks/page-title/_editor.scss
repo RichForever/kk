@@ -1,1 +1,10 @@
 @use "style";
+
+.kk-block.page-title h1,
+.kk-block.page-title h2,
+.kk-block.page-title .wp-block-button,
+.kk-block.page-title .wp-block-paragraph,
+.kk-block.page-title .wp-block-list {
+  margin-left: 0;
+  margin-right: 0;
+}

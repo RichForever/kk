@@ -28,3 +28,19 @@ html :where(.wp-block) {
 h1.wp-block-post-title {
   @apply text-4xl font-bold mb-12;
 }
+
+.kk-block h1 {
+  @apply font-extrabold text-3xl;
+}
+
+.kk-block h2 {
+  @apply font-extrabold text-2xl;
+}
+
+.kk-block h3 {
+  @apply font-extrabold text-lg;
+}
+
+.kk-block .wp-element-button {
+  @apply transition-all duration-500 text-white-500 inline-flex items-center focus:ring-4 focus:ring-blue-300 font-semibold rounded-lg text-base rounded-lg px-8 py-3 text-center bg-gradient-to-br from-[#1F6ED6] to-[#1857AA] hover:from-[#1857AA] hover:to-[#1F6ED6];
+}

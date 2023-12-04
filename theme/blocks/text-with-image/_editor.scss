@@ -1,1 +1,10 @@
 @use "style";
+
+.kk-block.text-with-image h1,
+.kk-block.text-with-image h2,
+.kk-block.text-with-image .wp-block-button,
+.kk-block.text-with-image .wp-block-paragraph,
+.kk-block.text-with-image .wp-block-list {
+  margin-left: 0;
+  margin-right: 0;
+}

@@ -20,8 +20,8 @@
          data-block="{{ block.name|replace({'kk/': ''}) }}">
     <div class="container items-center {{ containerPaddingClass }} rounded-lg text-center lg:text-left">
         <div class="gap-4 flex flex-col {{ reversedClass }}">
-            <div class="lg:w-full relative">
-                <div class="p-6 bg-blue-50 rounded-lg sm:p-10 lg:p-12 h-full w-full">
+            <div class="relative lg:w-full">
+                <div class="h-full w-full rounded-lg bg-blue-50 p-6 sm:p-10 lg:p-12">
                     {% include 'atoms/section-subtitle-pill.twig' with {
                         'content': fields.subtitle
                     } %}
@@ -33,7 +33,7 @@
                     <div class="background-squares">
                         <img src="{{ theme.link }}/assets/images/sqaures-top-dark.svg"
                              alt=""
-                             class="absolute bottom-0 right-0 h-1/2">
+                             class="absolute right-0 bottom-0 h-1/2">
                     </div>
                 </div>
             </div>

@@ -10,11 +10,21 @@
   "acf": {
     "mode": "preview",
     "renderTemplate": "render.php",
-    "postTypes": [ "post", "page" ]
+    "postTypes": [
+      "post",
+      "page"
+    ]
   },
   "styles": [
-    { "name": "light", "label": "Light", "isDefault": true },
-    { "name": "dark", "label": "Dark" }
+    {
+      "name": "light",
+      "label": "Light",
+      "isDefault": true
+    },
+    {
+      "name": "dark",
+      "label": "Dark"
+    }
   ],
   "supports": {
     "anchor": true

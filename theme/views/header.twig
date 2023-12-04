@@ -1,16 +1,16 @@
-<nav class="{{
-    fixed_menu ?
-    'absolute top-0 left-0 w-full z-[999] mt-0 bg-transparent' :
-    'bg-white-500'
-    }} py-4 lg:py-6 px-4 lg:px-8 navbar {{ page == '404' ? 'hidden' : 'block' }}" x-data="{ open: false }" :class="open && 'active'">
-    <div class="mx-auto flex flex-wrap items-center justify-between lg:container relative z-10">
+<nav class="{{ fixed_menu ?
+'absolute top-0 left-0 w-full z-[999] mt-0 bg-transparent' :
+'bg-white-500' }} py-4 lg:py-6 px-4 lg:px-8 navbar {{ page == '404' ? 'hidden' : 'block' }}" x-data="{ open: false }"
+     :class="open && 'active'">
+    <div class="relative z-10 mx-auto flex flex-wrap items-center justify-between lg:container">
         {% include 'partial/brand.twig' %}
         {% include 'partial/hamburger.twig' %}
-        <div class="hidden w-full lg:block lg:w-auto navbar__menu bg-white-500 rounded-lg mt-4 p-2 lg:bg-transparent lg:mt-0 lg:p-0" id="navbar-default">
+        <div class="mt-4 hidden w-full rounded-lg p-2 navbar__menu bg-white-500 lg:mt-0 lg:block lg:w-auto lg:bg-transparent lg:p-0"
+             id="navbar-default">
             {% include 'menu.twig' with {
                 'items': main_menu.items
             } %}
         </div>
     </div>
-    <div class="fixed top-0 left-0 h-full w-full backdrop-blur-sm bg-black-500/80 z-0" x-show="open"></div>
+    <div class="fixed top-0 left-0 z-0 h-full w-full backdrop-blur-sm bg-black-500/80" x-show="open" x-cloak></div>
 </nav>

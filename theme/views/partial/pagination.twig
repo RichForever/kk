@@ -1,37 +1,41 @@
 {% if posts.pagination.pages is not empty %}
-<nav aria-label="Blog pagination" class="">
-    <div class="grid grid-cols-2 grid-rows-2 md:flex items-center gap-4 text-base">
-        {% if posts.pagination.prev %}
-        <div class="row-start-2 row-span-1 col-start-1 col-span-1">
-            <a href="{{ posts.pagination.prev.link }}" class="flex items-center justify-center px-8 h-10 ms-0 leading-tight text-blue-500 bg-white border-2 border-blue-500 rounded-lg hover:bg-blue-100 hover:text-blue-500">
-                <span class="sr-only">Poprzednia strona</span>
-                <div class="rotate-180">
-                    {{ function('wpstarter_get_icon', 'icon-arrow-small') }}
+    <nav aria-label="Blog pagination" class="">
+        <div class="grid grid-cols-2 grid-rows-2 items-center gap-4 text-base md:flex">
+            {% if posts.pagination.prev %}
+                <div class="col-span-1 col-start-1 row-span-1 row-start-2">
+                    <a href="{{ posts.pagination.prev.link }}"
+                       class="flex h-10 items-center justify-center rounded-lg border-2 border-blue-500 bg-white px-8 leading-tight text-blue-500 ms-0 hover:bg-blue-100 hover:text-blue-500">
+                        <span class="sr-only">Poprzednia strona</span>
+                        <div class="rotate-180">
+                            {{ function('wpstarter_get_icon', 'icon-arrow-small') }}
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
-        {% endif %}
-        <div class="row-start-1 row-span-1 col-start-1 col-span-2 flex items-center justify-center gap-2">
-            {% for page in posts.pagination.pages %}
-                {% if page.link %}
-                    <a href="{{ page.link }}" class="flex items-center justify-center px-4 h-10 rounded-lg leading-tight font-semibold text-blue-500 bg-white border-2 border-blue-500 hover:bg-blue-100 hover:text-blue-500">
-                        {{ page.title }}
+            {% endif %}
+            <div class="col-span-2 col-start-1 row-span-1 row-start-1 flex items-center justify-center gap-2">
+                {% for page in posts.pagination.pages %}
+                    {% if page.link %}
+                        <a href="{{ page.link }}"
+                           class="flex h-10 items-center justify-center rounded-lg border-2 border-blue-500 bg-white px-4 font-semibold leading-tight text-blue-500 hover:bg-blue-100 hover:text-blue-500">
+                            {{ page.title }}
+                        </a>
+                    {% else %}
+                        <a href="{{ page.link }}" aria-current="page"
+                           class="z-10 flex h-10 items-center justify-center rounded-lg border-2 border-blue-500 bg-blue-500 px-4 font-semibold leading-tight text-white-500 hover:text-white-500 hover:bg-blue-600">
+                            {{ page.title }}
+                        </a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            {% if posts.pagination.next %}
+                <div class="col-span-1 col-start-2 row-span-1 row-start-2">
+                    <a href="{{ posts.pagination.next.link }}"
+                       class="flex h-10 items-center justify-center rounded-lg border-2 border-blue-500 bg-white px-8 leading-tight text-blue-500 hover:bg-blue-100 hover:text-blue-500">
+                        <span class="sr-only">Następna strona</span>
+                        {{ function('wpstarter_get_icon', 'icon-arrow-small') }}
                     </a>
-                {% else %}
-                    <a href="{{ page.link }}" aria-current="page" class="z-10 flex items-center justify-center px-4 h-10 rounded-lg leading-tight font-semibold text-white-500 border-2 border-blue-500 bg-blue-500 hover:bg-blue-600 hover:text-white-500">
-                        {{ page.title }}
-                    </a>
-                {% endif %}
-            {% endfor %}
+                </div>
+            {% endif %}
         </div>
-        {% if posts.pagination.next %}
-        <div class="row-start-2 row-span-1 col-start-2 col-span-1">
-            <a href="{{ posts.pagination.next.link }}" class="flex items-center justify-center px-8 h-10 leading-tight text-blue-500 bg-white border-2 border-blue-500 rounded-lg hover:bg-blue-100 hover:text-blue-500">
-                <span class="sr-only">Następna strona</span>
-                {{ function('wpstarter_get_icon', 'icon-arrow-small') }}
-            </a>
-        </div>
-        {% endif %}
-    </div>
-</nav>
+    </nav>
 {% endif %}

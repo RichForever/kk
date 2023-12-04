@@ -1,12 +1,12 @@
 <div
-    x-data="{openAccordionItem: false}"
-    @click.away="openAccordionItem = false"
-    class="rounded-lg border border-solid p-6 group hover:text-blue-500"
-    :class="openAccordionItem ? 'bg-blue-50 text-blue-500 border-blue-100' : 'bg-white-500 text-black-500 border-transparent'"
+        x-data="{openAccordionItem: false}"
+        @click.away="openAccordionItem = false"
+        class="rounded-lg border border-solid p-6 group hover:text-blue-500"
+        :class="openAccordionItem ? 'bg-blue-50 text-blue-500 border-blue-100' : 'bg-white-500 text-black-500 border-transparent'"
 >
     <button
-        @click.prevent="openAccordionItem = !openAccordionItem"
-        class="flex w-full items-baseline justify-between gap-2 text-left text-base font-semibold"
+            @click.prevent="openAccordionItem = !openAccordionItem"
+            class="flex w-full items-baseline justify-between gap-2 text-left text-base font-semibold"
     >
         <span class="leading-normal">{{ item.question }}</span>
         <div :class="openAccordionItem ? 'child:-rotate-180' : ''">

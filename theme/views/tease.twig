@@ -1,7 +1,7 @@
-<article class="tease tease-{{post.post_type}}" id="tease-{{post.ID}}">
+<article class="tease tease-{{ post.post_type }}" id="tease-{{ post.ID }}">
     {% block content %}
-        <a href="{{post.link}}">
-            <h2 class="text-xl text-brand-blue-dark">{{post.title}}</h2>
+        <a href="{{ post.link }}">
+            <h2 class="text-xl text-brand-blue-dark">{{ post.title }}</h2>
             <p>{{ post.excerpt({read_more: false}) }}</p>
         </a>
     {% endblock %}

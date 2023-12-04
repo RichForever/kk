@@ -13,7 +13,8 @@
     "postTypes": [ "post", "page" ]
   },
   "supports": {
-    "anchor": true
+    "anchor": true,
+    "jsx": false
   },
   "example": {
     "attributes": {

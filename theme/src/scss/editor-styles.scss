@@ -8,6 +8,7 @@
 @use "~blocks/spacer/editor" as spacer;
 @use "~blocks/text-with-image/editor" as textwithimage;
 @use "~blocks/text-with-image-gallery/editor" as textwithimagegallery;
+@use "~blocks/text-with-list/editor" as textwithlist;
 
 @use "base" as base;
 @use "components" as components;

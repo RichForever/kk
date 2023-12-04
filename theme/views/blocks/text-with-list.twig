@@ -1,7 +1,5 @@
-{% set blockBackground = 'is-style-dark' in block.customClass or 'is-style-dark-inverted' in block.customClass ? 'bg-gradient-to-br from-[#092342] to-[#06172D]' : 'bg-blue-50' %}
-
 {% set reversedClass = '' %}
-{% if 'is-style-dark-inverted' in block.customClass or 'is-style-light-inverted' in block.customClass %}
+{% if 'is-style-inverted' in block.customClass %}
     {% set reversedClass = 'lg:flex-row-reverse' %}
 {% else %}
     {% set reversedClass = 'lg:flex-row' %}
@@ -18,12 +16,12 @@
     {% set containerPaddingClass = 'py-20 xl:py-32' %}
 {% endif %}
 
-<section class="kk-block section px-4 lg:px-8 {{ block.customClass }} {{ blockBackground }}" {{ block.anchor }}
+<section class="kk-block section px-4 lg:px-8 {{ block.customClass }}" {{ block.anchor }}
          data-block="{{ block.name|replace({'kk/': ''}) }}">
     <div class="container items-center {{ containerPaddingClass }} rounded-lg text-center lg:text-left">
-        <div class="flex flex-col gap-12 2xl:gap-20">
-            <div class="gap-12 flex flex-col-reverse {{ reversedClass }} lg:items-center lg:justify-between xl:gap-32">
-                <div class="lg:w-7/12 xl:w-6/12">
+        <div class="gap-4 flex flex-col {{ reversedClass }}">
+            <div class="lg:w-full relative">
+                <div class="p-6 bg-blue-50 rounded-lg sm:p-10 lg:p-12 h-full w-full">
                     {% include 'atoms/section-subtitle-pill.twig' with {
                         'content': fields.subtitle
                     } %}
@@ -32,22 +30,20 @@
                             template="{{ allowed_blocks_template | json_encode() | escape('html_attr') }}"
                             className="flex flex-col gap-4"
                     />
-                </div>
-                {% if fields.image %}
-                    <div class="lg:w-5/12">
-                        {% include 'atoms/image.twig' with {
-                            'imageItem': fields.image,
-                            'imageSize': 'image-420',
-                            'customClass': 'block h-auto w-full'
-                        } %}
+                    <div class="background-squares">
+                        <img src="{{ theme.link }}/assets/images/sqaures-top-dark.svg"
+                             alt=""
+                             class="absolute bottom-0 right-0 h-1/2">
                     </div>
-                {% endif %}
+                </div>
             </div>
-            {% if fields.gallery %}
-                <div class="flex flex-col gap-5 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-4">
-                    {% for item in fields.gallery %}
-                        {% include 'partial/block-gallery-item.twig' %}
-                    {% endfor %}
+            {% if fields.list_repeater %}
+                <div class="lg:w-full">
+                    <div class="bg-gradient-to-br from-[#092342] to-[#06172D] rounded-lg p-6 sm:p-10 lg:p-8 xl:p-12 h-full w-full">
+                        {% for item in fields.list_repeater %}
+                            {% include 'partial/block-list-item.twig' %}
+                        {% endfor %}
+                    </div>
                 </div>
             {% endif %}
         </div>

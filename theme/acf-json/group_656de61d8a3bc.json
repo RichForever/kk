@@ -1,0 +1,65 @@
+{
+    "key": "group_656de61d8a3bc",
+    "title": "[Block Setting] Container padding",
+    "fields": [
+        {
+            "key": "field_656de61d8e3b4",
+            "label": "Remove padding top",
+            "name": "padding_top",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "When selected - padding top for main container will be reduced to 0",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_656de6e71ecfe",
+            "label": "Remove padding bottom",
+            "name": "padding_bottom",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "When selected - padding bottom for main container will be reduced to 0",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1701701854
+}

@@ -1,6 +1,17 @@
+{% set containerPaddingClass = '' %}
+{% if fields.padding_top and fields.padding_bottom %}
+    {% set containerPaddingClass = 'py-0' %}
+{% elseif fields.padding_top and not fields.padding_bottom %}
+    {% set containerPaddingClass = 'pt-0 pb-20 xl:pb-32' %}
+{% elseif not fields.padding_top and fields.padding_bottom %}
+    {% set containerPaddingClass = 'pb-0 pt-20 xl:pt-32' %}
+{% else %}
+    {% set containerPaddingClass = 'py-20 xl:py-32' %}
+{% endif %}
+
 <section class="kk-block section px-4 lg:px-8 {{ block.customClass }}" {{ block.anchor }}
          data-block="{{ block.name|replace({'kk/': ''}) }}">
-    <div class="container items-center rounded-lg py-20 text-center md:text-left xl:py-32">
+    <div class="container items-center rounded-lg text-center md:text-left {{ containerPaddingClass }}">
         <div class="flex flex-col gap-12 2xl:gap-20">
             <div class="text-center lg:mx-auto lg:w-8/12">
                 {% include 'atoms/section-subtitle-pill.twig' with {

@@ -38,7 +38,7 @@ $context['posts'] = Timber::get_posts( [
 	'post_status'    => 'publish',
 	'order'          => 'DESC',
 	'orderby'        => 'date',
-	'posts_per_page' => 3,
+	'posts_per_page' => 2,
 	'cat'            => get_field( 'categories' )
 ] );
 

@@ -33,13 +33,27 @@ $context['attributes']              = $block['attributes'];
 $context['allowed_blocks']          = $allowedBlocks;
 $context['allowed_blocks_template'] = $template;
 
-$context['posts'] = Timber::get_posts( [
+$categories = get_field( 'categories' );
+$stickyPost = get_field( 'sticky_post' );
+
+// Base arguments for query
+$args = [
 	'post_type'      => 'post',
 	'post_status'    => 'publish',
-	'order'          => 'DESC',
 	'orderby'        => 'date',
-	'posts_per_page' => 2,
-	'cat'            => get_field( 'categories' )
-] );
+	'order'          => 'DESC',
+	'posts_per_page' => 3
+];
+
+if($categories) {
+	$args['category__in'] = $categories;
+}
+
+if($stickyPost) {
+	$args['posts_per_page'] = 2;
+	$context['sticky_post'] = Timber::get_post($stickyPost);
+}
+
+$context['posts'] = Timber::get_posts( $args );
 
 Timber::render( 'blocks/' . $blockName . '.twig', $context );

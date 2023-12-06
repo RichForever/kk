@@ -1,5 +1,6 @@
 <div
-        x-data="{openAccordionItem: false}"
+{#        x-data="{openAccordionItem: false}"#}
+        x-data="accordion"
         @click.away="openAccordionItem = false"
         class="rounded-lg border border-solid p-6 group hover:text-blue-500"
         :class="openAccordionItem ? 'bg-blue-50 text-blue-500 border-blue-100' : 'bg-white-500 text-black-500 border-transparent'"
@@ -17,3 +18,11 @@
         {{ item.answer }}
     </div>
 </div>
+
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('accordion', () => ({
+            openAccordionItem: false,
+        }))
+    })
+</script>

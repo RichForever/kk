@@ -24,13 +24,23 @@
                 />
             </div>
 
-            {% if posts|length > 0 %}
+
+
+
                 <div class="flex flex-col gap-16 md:grid md:grid-cols-2 md:gap-x-4 md:gap-y-8 xl:grid-cols-3 xl:gap-9 2xl:gap-12">
-                    {% for post in posts %}
-                        {% include 'partial/block-post-tease.twig' %}
-                    {% endfor %}
+                    {% if sticky_post %}
+                        {% include 'partial/block-post-tease.twig' with {
+                            'post': sticky_post
+                        } %}
+                    {% endif %}
+
+                    {% if posts|length > 0 %}
+                        {% for post in posts %}
+                            {% include 'partial/block-post-tease.twig' %}
+                        {% endfor %}
+                    {% endif %}
                 </div>
-            {% endif %}
+
 
             {% if posts|length <= 0 %}
                 <div class="text-center text-black-500">

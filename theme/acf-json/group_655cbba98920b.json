@@ -20,6 +20,32 @@
             "endpoint": 0
         },
         {
+            "key": "field_657062a4490c6",
+            "label": "Sticky post",
+            "name": "sticky_post",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "post"
+            ],
+            "post_status": "",
+            "taxonomy": "",
+            "return_format": "id",
+            "multiple": 0,
+            "allow_null": 1,
+            "bidirectional": 0,
+            "ui": 1,
+            "bidirectional_target": []
+        },
+        {
             "key": "field_655cbbc3a6edc",
             "label": "Categories",
             "name": "categories",
@@ -63,5 +89,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1700576243
+    "modified": 1701869374
 }

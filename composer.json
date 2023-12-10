@@ -7,12 +7,21 @@
     "timber/timber": "^2.0",
     "wpengine/advanced-custom-fields-pro": "^6.0",
     "houke/acf-icon-picker": "dev-master",
-    "wpackagist-plugin/duplicate-page": "^4.5.3"
+    "wpackagist-plugin/contact-form-7":"5.8.4",
+    "wpackagist-plugin/duplicate-page":"4.5.3"
   },
   "repositories": [
     {
       "type":"composer",
       "url":"https://connect.advancedcustomfields.com"
+    },
+    {
+      "type":"composer",
+      "url":"https://wpackagist.org",
+      "only": [
+        "wpackagist-plugin/*",
+        "wpackagist-theme/*"
+      ]
     }
   ],
   "extra": {
@@ -27,5 +36,8 @@
       "composer/installers": true
     }
   },
-  "minimum-stability": "stable"
+  "minimum-stability": "stable",
+  "require-dev": {
+    "symfony/debug": "^4.4"
+  }
 }

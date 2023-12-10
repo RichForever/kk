@@ -1,4 +1,10 @@
-{% set blockBackground = 'is-style-dark' in block.customClass ? 'bg-gradient-to-br from-[#092342] to-[#06172D]' : 'bg-blue-50' %}
+{% if 'is-style-dark' in block.customClass %}
+    {% set blockBackground = 'bg-gradient-to-br from-[#092342] to-[#06172D]' %}
+{% elseif 'is-style-light' in block.customClass %}
+    {% set blockBackground = 'bg-blue-50' %}
+{% else %}
+    {% set blockBackground = 'bg-white-500' %}
+{% endif %}
 
 <section class="kk-block section px-4 lg:px-8 {{ block.customClass }}" {{ block.anchor }}
          data-block="{{ block.name|replace({'kk/': ''}) }}">
@@ -15,11 +21,13 @@
             {% include 'atoms/section-subtitle-pill.twig' with {
                 'content': fields.subtitle
             } %}
+            {% block innerBlocksContent %}
             <InnerBlocks
                     allowedBlocks="{{ allowed_blocks | json_encode() | escape('html_attr') }}"
                     template="{{ allowed_blocks_template | json_encode() | escape('html_attr') }}"
                     className="flex flex-col gap-4"
             />
+            {% endblock %}
         </div>
     </div>
 </section>

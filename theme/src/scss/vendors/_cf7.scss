@@ -1,0 +1,52 @@
+/* purgecss start ignore */
+.wpcf7-form .form__label {
+  @apply block mb-2 font-semibold text-black-500 text-sm lg:text-base text-left
+}
+
+.wpcf7-form .form__input,
+.wpcf7-form .form__textarea,
+.wpcf7-form .form__select,
+.wpcf7-form .form__date {
+  @apply block rounded-lg p-3 w-full bg-white-500 border border-black-100 font-normal text-black-300 text-base
+}
+
+.wpcf7-form .form__checkbox {
+  @apply w-4 h-4 text-blue-500 bg-gray-100 border-black-100 rounded checked:bg-blue-500 checked:border-blue-500 checked:ring-0
+}
+
+.wpcf7-form .form__checkbox + .wpcf7-list-item-label {
+  @apply text-base text-black-300 leading-6 text-left
+}
+
+.wpcf7-form .wpcf7-acceptance > span > label {
+  @apply flex gap-2 items-baseline
+}
+
+.wpcf7-list-item {
+  @apply m-0
+}
+
+.wpcf7-form .form__submit {
+  @apply w-full cursor-pointer transition-all duration-500 text-white-500 inline-flex items-center justify-center focus:ring-4 focus:ring-blue-300 font-semibold rounded-lg text-base rounded-lg px-8 py-3 text-center bg-gradient-to-br from-[#1F6ED6] to-[#1857AA] hover:from-[#1857AA] hover:to-[#1F6ED6];
+}
+
+.wpcf7-not-valid-tip {
+  @apply mt-1 inline-block text-sm font-semibold text-red-500
+}
+
+.wpcf7 form.failed .wpcf7-response-output {
+  @apply p-4 mb-4 text-sm text-red-500 rounded-lg bg-red-50 font-semibold border-red-500
+}
+
+.wpcf7 form.invalid .wpcf7-response-output {
+  @apply p-4 mb-4 text-sm text-yellow-500 rounded-lg bg-yellow-50 font-semibold border-yellow-500
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+  @apply p-4 mb-4 text-sm text-green-500 rounded-lg bg-green-50 font-semibold border-green-500
+}
+
+.wpcf7 a {
+  @apply underline text-blue-500 hover:text-blue-600;
+}
+/* purgecss end ignore */

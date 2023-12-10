@@ -6,11 +6,13 @@
     <div class="container items-center rounded-lg text-center {{ fields.overlap ? 'pt-8 pb-10 xl:pb-12' : 'py-20 xl:py-32' }}">
         <div class="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 xl:gap-8 2xl:gap-32">
             <div class="text-center lg:w-6/12 lg:text-left 2xl:w-7/12">
+                {% block innerBlocksContent %}
                 <InnerBlocks
                         allowedBlocks="{{ allowed_blocks | json_encode() | escape('html_attr') }}"
                         template="{{ allowed_blocks_template | json_encode() | escape('html_attr') }}"
                         className="flex flex-col gap-4"
                 />
+                {% endblock %}
             </div>
             {% if fields.image %}
                 <div class="lg:w-6/12 2xl:w-5/12 relative before:content-[''] before:block before:w-[500px] before:h-[500px] before:absolute before:-translate-x-1/2 before:-translate-y-1/2 before:blur-3xl before:z-[-1] before:opacity-30 before:rounded-full before:left-1/2 before:top-1/2 before:bg-blue-700">

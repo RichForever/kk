@@ -13,24 +13,10 @@
 <section class="kk-block section px-4 lg:px-8 {{ block.customClass }}" {{ block.anchor }}
          data-block="{{ block.name|replace({'kk/': ''}) }}">
     <div class="container items-center rounded-lg text-center md:text-left {{ containerPaddingClass }}">
-        <div class="flex flex-col gap-12 lg:flex-row lg:justify-between lg:gap-0">
-            <div class="lg:w-6/12 xl:w-7/12 2xl:w-6/12">
-                {% include 'atoms/section-subtitle-pill.twig' with {
-                    'content': fields.subtitle
-                } %}
-                <InnerBlocks
-                        allowedBlocks="{{ allowed_blocks | json_encode() | escape('html_attr') }}"
-                        template="{{ allowed_blocks_template | json_encode() | escape('html_attr') }}"
-                        className="flex flex-col gap-4"
-                />
-            </div>
-            {% if fields.contact_repeater %}
-                <div class="lg:w-5/12 xl:w-4/12">
-                    {% for item in fields.contact_repeater %}
-                        {% include 'partial/block-contact-item.twig' %}
-                    {% endfor %}
-                </div>
-            {% endif %}
-        </div>
+        {% if fields.form_shortcode %}
+            {% include 'partial/block-contact-with-form.twig' %}
+        {% else %}
+            {% include 'partial/block-contact-without-form.twig' %}
+        {% endif %}
     </div>
 </section>

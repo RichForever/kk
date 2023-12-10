@@ -18,8 +18,7 @@
   "styles": [
     {
       "name": "light",
-      "label": "Light",
-      "isDefault": true
+      "label": "Light"
     },
     {
       "name": "dark",

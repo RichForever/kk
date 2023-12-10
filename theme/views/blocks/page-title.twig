@@ -10,11 +10,13 @@
                  class="absolute top-0 right-0 h-1/2 sm:h-3/4 lg:h-full">
         </div>
         <div class="relative text-left lg:w-10/12">
+            {% block innerBlocksContent %}
             <InnerBlocks
                     allowedBlocks="{{ allowed_blocks | json_encode() | escape('html_attr') }}"
                     template="{{ allowed_blocks_template | json_encode() | escape('html_attr') }}"
                     className="flex flex-col gap-4"
             />
+            {% endblock %}
         </div>
     </div>
 

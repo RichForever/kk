@@ -1,0 +1,28 @@
+<div class="flex flex-col gap-12 lg:flex-row lg:justify-between lg:gap-0">
+    <div class="lg:w-6/12 xl:w-7/12 2xl:w-6/12">
+        {% include 'atoms/section-subtitle-pill.twig' with {
+            'content': fields.subtitle
+        } %}
+        {% block innerBlocksContent %}
+            <InnerBlocks
+                    allowedBlocks="{{ allowed_blocks | json_encode() | escape('html_attr') }}"
+                    template="{{ allowed_blocks_template | json_encode() | escape('html_attr') }}"
+                    className="flex flex-col gap-4"
+            />
+        {% endblock %}
+        {% if fields.contact_repeater %}
+            <div class="mt-12 lg:mt-16">
+                {% for item in fields.contact_repeater %}
+                    {% include 'partial/block-contact-item.twig' %}
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+    {% if fields.contact_repeater %}
+        <div class="lg:w-5/12 xl:w-4/12">
+            {% apply shortcodes %}
+                {{ fields.form_shortcode }}
+            {% endapply %}
+        </div>
+    {% endif %}
+</div>

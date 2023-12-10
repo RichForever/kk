@@ -27,11 +27,13 @@
                     {% include 'atoms/section-subtitle-pill.twig' with {
                         'content': fields.subtitle
                     } %}
+                    {% block innerBlocksContent %}
                     <InnerBlocks
                             allowedBlocks="{{ allowed_blocks | json_encode() | escape('html_attr') }}"
                             template="{{ allowed_blocks_template | json_encode() | escape('html_attr') }}"
                             className="flex flex-col gap-4"
                     />
+                    {% endblock %}
                 </div>
                 {% if fields.image %}
                     <div class="lg:w-5/12">

@@ -17,18 +17,27 @@
                 {% include 'atoms/section-subtitle-pill.twig' with {
                     'content': fields.subtitle
                 } %}
+                {% block innerBlocksContent %}
                 <InnerBlocks
                         allowedBlocks="{{ allowed_blocks | json_encode() | escape('html_attr') }}"
                         template="{{ allowed_blocks_template | json_encode() | escape('html_attr') }}"
                         className="flex flex-col gap-4"
                 />
+                {% endblock %}
             </div>
-            {% if fields.disclaimer %}
-                <div class="flex flex-col gap-4 rounded-lg bg-blue-500 p-6 text-left text-white-500 sm:flex-row sm:items-center lg:mx-auto lg:w-8/12">
+            {% if fields.disclaimer.content %}
+                <div class="flex flex-col gap-4 rounded-lg bg-blue-500 p-6 text-left text-white-500 sm:flex-row lg:mx-auto lg:w-8/12">
                     <div class="w-8 sm:w-24 md:w-20 lg:w-24 xl:w-20 2xl:w-16">
                         {{ function('wpstarter_get_icon', 'icon-info-small') }}
                     </div>
-                    <p class="font-medium text-white-500">{{ fields.disclaimer }}</p>
+                    <div class="space-y-4">
+                        {% if fields.disclaimer.content %}
+                            <p class="font-medium text-white-500">{{ fields.disclaimer.content }}</p>
+                        {% endif %}
+                        {% if fields.disclaimer.button.link and fields.disclaimer.button.label %}
+                            <a href="{{ fields.disclaimer.button.link }}" class="kk-block__btn-outline">{{ fields.disclaimer.button.label }}</a>
+                        {% endif %}
+                    </div>
                 </div>
             {% endif %}
             {% if fields.faq_repeater %}

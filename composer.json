@@ -4,11 +4,11 @@
   "description": "A modern Wordpress theme using Timber, ACF, Tailwind CSS and Alpine JS",
   "license": "MIT",
   "require": {
-    "timber/timber": "^2.0",
-    "wpengine/advanced-custom-fields-pro": "^6.0",
     "houke/acf-icon-picker": "dev-master",
-    "wpackagist-plugin/contact-form-7":"5.8.4",
-    "wpackagist-plugin/duplicate-page":"4.5.3"
+    "timber/timber": "^2.0",
+    "wpackagist-plugin/contact-form-7": "5.8.4",
+    "wpackagist-plugin/duplicate-page": "4.5.3",
+    "wpengine/advanced-custom-fields-pro": "^6.0"
   },
   "repositories": [
     {
@@ -38,6 +38,7 @@
   },
   "minimum-stability": "stable",
   "require-dev": {
+    "hellonico/timber-dump-extension": "^1.0",
     "symfony/debug": "^4.4"
   }
 }

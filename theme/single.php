@@ -14,12 +14,14 @@ $context['categories'] = Timber::get_terms( 'category', array( 'hide_empty' => f
 // Parse all blocks from the post content
 $post_content = get_the_content();
 $blocks = parse_blocks($post_content);
+$blocksCount = count($blocks);
 
 $blockCta = null;
 $blockContact = null;
 $filteredPostContent = '';
 
-foreach ($blocks as $block) {
+foreach ($blocks as $index => $block) {
+
 	// Check if the block is the ACF block you want to render
 	if ($block['blockName'] == 'kk/cta') {
 		// Render the block

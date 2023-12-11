@@ -1,4 +1,16 @@
 /* purgecss start ignore */
+.wpcf7-form {
+  @apply bg-blue-50 rounded-lg p-6 lg:p-8 text-left
+}
+
+.wpcf7-spinner {
+  display: none;
+}
+
+.wpcf7-form.submitting .wpcf7-spinner {
+  display: block;
+}
+
 .wpcf7-form .form__label {
   @apply block mb-2 font-semibold text-black-500 text-sm lg:text-base text-left
 }
@@ -27,23 +39,31 @@
 }
 
 .wpcf7-form .form__submit {
-  @apply w-full cursor-pointer transition-all duration-500 text-white-500 inline-flex items-center justify-center focus:ring-4 focus:ring-blue-300 font-semibold rounded-lg text-base rounded-lg px-8 py-3 text-center bg-gradient-to-br from-[#1F6ED6] to-[#1857AA] hover:from-[#1857AA] hover:to-[#1F6ED6];
+  @apply w-full cursor-pointer transition-all duration-500 text-white-500 inline-flex items-center justify-center focus:ring-4 focus:ring-blue-300 font-semibold rounded-lg text-base rounded-lg px-8 py-3 text-center bg-gradient-to-br from-[#1F6ED6] to-[#1857AA] hover:from-[#1857AA] hover:to-[#1F6ED6] disabled:opacity-50
 }
 
 .wpcf7-not-valid-tip {
-  @apply mt-1 inline-block text-sm font-semibold text-red-500
+  @apply mt-1 inline-block text-sm font-semibold text-red-500 text-left
+}
+
+.wpcf7 form .wpcf7-response-output {
+  @apply p-4 text-sm rounded-lg font-semibold mx-0 mb-0 mt-4 lg:mt-6
 }
 
 .wpcf7 form.failed .wpcf7-response-output {
-  @apply p-4 mb-4 text-sm text-red-500 rounded-lg bg-red-50 font-semibold border-red-500
+  @apply text-red-500 bg-red-50 border-red-500
 }
 
 .wpcf7 form.invalid .wpcf7-response-output {
-  @apply p-4 mb-4 text-sm text-yellow-500 rounded-lg bg-yellow-50 font-semibold border-yellow-500
+  @apply text-yellow-500 bg-yellow-50 border-yellow-500
 }
 
 .wpcf7 form.sent .wpcf7-response-output {
-  @apply p-4 mb-4 text-sm text-green-500 rounded-lg bg-green-50 font-semibold border-green-500
+  @apply text-green-500 bg-green-50 border-green-500
+}
+
+.wpcf7-form-control-wrap {
+  @apply flex flex-col
 }
 
 .wpcf7 a {

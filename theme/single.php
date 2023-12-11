@@ -11,6 +11,31 @@ $timber_post           = Timber::get_post();
 $context['post']       = $timber_post;
 $context['categories'] = Timber::get_terms( 'category', array( 'hide_empty' => false ) );
 
+// Parse all blocks from the post content
+$post_content = get_the_content();
+$blocks = parse_blocks($post_content);
+
+$blockCta = null;
+$blockContact = null;
+$filteredPostContent = '';
+
+foreach ($blocks as $block) {
+	// Check if the block is the ACF block you want to render
+	if ($block['blockName'] == 'kk/cta') {
+		// Render the block
+		$blockCta = render_block($block);
+	} elseif ($block['blockName'] == 'kk/contact') {
+		// Render the block
+		$blockContact = render_block($block);
+	} else {
+		$filteredPostContent .= render_block($block);
+	}
+}
+
+$context['filteredPostContent'] = $filteredPostContent;
+$context['blockCta'] = $blockCta;
+$context['blockContact'] = $blockContact;
+
 if ( post_password_required( $timber_post->ID ) ) {
 	Timber::render( 'single-password.twig', $context );
 } else {

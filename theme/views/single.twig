@@ -10,7 +10,7 @@
                     {% include 'partial/post-tease-single.twig' %}
 
                     <div class="w-full max-w-full prose prose-blue">
-                        {{ post.content }}
+                        {{ filteredPostContent|raw }}
                     </div>
                 </div>
 
@@ -21,4 +21,13 @@
             </div>
         </div>
     </div>
+
+    {% if blockCta %}
+        {{ blockCta|raw }}
+    {% endif %}
+
+    {% if blockContact %}
+        {{ blockContact|raw }}
+    {% endif %}
+
 {% endblock %}

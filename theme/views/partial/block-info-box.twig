@@ -3,8 +3,13 @@
         {{ function('wpstarter_get_icon', box.icon) }}
     </div>
     <div class="text-center box__content">
-        <h3 class="mb-2 font-bold text-md text-black-500 group-hover:text-white-500 md:text-lg">{{ box.title }}</h3>
-        <div class="group-hover:child:text-blue-100">{{ box.content }}</div>
+        {% if box.title %}
+            <h3 class="mb-2 font-bold text-md text-black-500 group-hover:text-white-500 md:text-lg">{{ box.title }}</h3>
+        {% endif %}
+
+        {% if box.content %}
+            <div class="group-hover:child:text-blue-100">{{ box.content }}</div>
+        {% endif %}
     </div>
     {% if box.link.label and box.link.url %}
         <div class="box__footer">

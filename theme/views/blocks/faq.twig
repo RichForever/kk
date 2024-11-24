@@ -25,7 +25,7 @@
                 />
                 {% endblock %}
             </div>
-            {% if fields.disclaimer.content %}
+            {% if fields.show_disclaimer and fields.disclaimer.content %}
                 <div class="flex flex-col gap-4 rounded-lg bg-blue-500 p-6 text-left text-white-500 sm:flex-row lg:mx-auto lg:w-8/12">
                     <div class="w-8 sm:w-24 md:w-20 lg:w-24 xl:w-20 2xl:w-16">
                         {{ function('wpstarter_get_icon', 'icon-info-small') }}

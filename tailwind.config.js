@@ -69,5 +69,9 @@ module.exports = {
     ],
     safelist: [
         'navbar.active',
+        'xl:grid-cols-1',
+        'xl:grid-cols-2',
+        'xl:grid-cols-3',
+        'xl:grid-cols-4'
     ]
 }

@@ -1,6 +1,6 @@
 <?php
 
-$allowedBlocks = [ 'core/heading', 'core/paragraph' ];
+$allowedBlocks = [ 'core/heading', 'core/paragraph', 'core/button' ];
 $template      = [
 	[
 		'core/heading',
@@ -14,6 +14,13 @@ $template      = [
 		'core/paragraph',
 		[
 			'content' => 'Jeśli jesteś zainteresowany tematyką upadłości konsumenckiej zachęcam Cię do zapoznania się z podstawowymi informacjami zaprezentowanymi poniżej.',
+		]
+	],
+	[
+		'core/button',
+		[
+			'text'      => 'Umów nieodpłatną konsultację',
+			'className' => 'kk-block__btn mt-6'
 		]
 	]
 

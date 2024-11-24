@@ -32,8 +32,9 @@ p + p {
 }
 
 p > a,
-span > a {
-  @apply text-blue-500 hover:underline transition-all duration-500;
+span > a,
+li:not(.menu-item) > a {
+  @apply text-blue-500 hover:text-blue-600 underline transition-all duration-500;
 }
 
 small, .text_small {font-size: 0.75rem;}

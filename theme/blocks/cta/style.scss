@@ -17,5 +17,9 @@
     p {
       @apply text-blue-100;
     }
+
+    a {
+      @apply text-blue-300 hover:text-blue-400;
+    }
   }
 }

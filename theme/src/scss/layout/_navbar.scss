@@ -21,3 +21,7 @@
 .navbar li.btn > a {
   @apply w-full transition-all duration-500 text-white-500 inline-flex items-center focus:ring-4 focus:ring-blue-300 font-semibold rounded-lg text-base rounded-lg px-6 py-2 text-center bg-gradient-to-br from-[#1F6ED6] to-[#1857AA] hover:from-[#1857AA] hover:to-[#1F6ED6];
 }
+
+.navbar .menu-item__has-submenu-active {
+  @apply text-blue-500 bg-white-500 fill-blue-500 hover:text-blue-500 hover:bg-white-500 hover:fill-blue-500 lg:bg-transparent lg:underline lg:text-blue-200 lg:fill-blue-200 lg:hover:text-blue-200 lg:hover:bg-inherit lg:hover:fill-blue-200;
+}

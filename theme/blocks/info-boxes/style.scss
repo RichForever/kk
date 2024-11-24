@@ -1,4 +1,7 @@
 @use "../../src/scss/utils";
 
 .kk-block.info-boxes {
+  p > strong {
+    @apply text-blue-500;
+  }
 }

@@ -21,12 +21,12 @@
             "selected": 0
         },
         {
-            "key": "field_6575eb71770bb",
+            "key": "field_6733a61c9c5b6",
             "label": "Form shortcode",
             "name": "form_shortcode",
             "aria-label": "",
             "type": "text",
-            "instructions": "Paste CF7 shortcode to display contact form and change block layout",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -36,6 +36,7 @@
             },
             "default_value": "",
             "maxlength": "",
+            "allow_in_bindings": 0,
             "placeholder": "",
             "prepend": "",
             "append": ""
@@ -122,5 +123,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1727072709
+    "modified": 1732713746
 }

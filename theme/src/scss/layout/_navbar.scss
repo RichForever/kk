@@ -21,3 +21,35 @@
 .navbar li.btn > a {
   @apply w-full transition-all duration-500 text-white-500 inline-flex items-center focus:ring-4 focus:ring-blue-300 font-semibold rounded-lg text-base rounded-lg px-6 py-2 text-center bg-gradient-to-br from-[#1F6ED6] to-[#1857AA] hover:from-[#1857AA] hover:to-[#1F6ED6];
 }
+
+.navbar li.menu-item__has-submenu-active {
+  @apply text-blue-500 bg-[#F5F9FF] rounded-lg lg:rounded-none lg:bg-transparent;
+}
+
+.navbar li.menu-item__has-submenu-active > a {
+  @apply text-blue-500 hover:text-inherit hover:bg-inherit lg:text-blue-200 lg:hover:text-blue-200;
+}
+
+.navbar .menu-item__has-submenu-active ul.menu-submenu li a {
+  @apply text-black-500 rounded-lg border border-transparent hover:text-blue-500 hover:bg-white-500 hover:border-[#DFECFF] lg:hover:bg-[#F5F9FF];
+}
+
+.navbar .menu-item__has-submenu-active ul.menu-submenu li {
+  @apply lg:py-3;
+}
+
+.navbar .menu-item__has-submenu-active ul.menu-submenu li:first-child {
+  @apply lg:pt-0;
+}
+
+.navbar .menu-item__has-submenu-active ul.menu-submenu li:last-child {
+  @apply lg:pb-0;
+}
+
+.navbar.navbar--static .menu-item__has-submenu-active > a {
+  @apply lg:text-blue-500 lg:hover:text-blue-500;
+}
+
+.navbar.navbar--static .menu-submenu--active {
+  @apply lg:shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px];
+}

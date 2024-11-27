@@ -8,6 +8,7 @@ import { initBlock } from './blocks';
 
 const blockNames = [
   "cta",
+  "cta-with-form",
   "contact",
   "recent-posts",
   "info-boxes",

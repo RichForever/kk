@@ -28,7 +28,8 @@
                 {% endblock %}
             </div>
             {% if fields.info_boxes_repeater %}
-                <div class="flex flex-col gap-6 md:grid md:grid-cols-2 md:gap-4 xl:grid-cols-3">
+                {% set gridClass = 'xl:grid-cols-' ~ fields.boxes_per_row ?? '3' %}
+                <div class="flex flex-col gap-6 md:grid md:grid-cols-2 md:gap-4 {{ gridClass }}">
                     {% for box in fields.info_boxes_repeater %}
                         {% include 'partial/block-info-box.twig' %}
                     {% endfor %}

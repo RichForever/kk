@@ -1,14 +1,14 @@
 {
-    "key": "group_655cb59ceb270",
-    "title": "[Block Setting] Section subtitle",
+    "key": "group_6747163f0b8d1",
+    "title": "[Block] Call To Action With CF7 Form",
     "fields": [
         {
-            "key": "field_655cb59d76b7a",
-            "label": "Section subtitle",
-            "name": "subtitle",
+            "key": "field_6747163f32814",
+            "label": "Form shortcode",
+            "name": "form_shortcode",
             "aria-label": "",
             "type": "text",
-            "instructions": "Element will not show if the value in this field will be empty",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -18,6 +18,7 @@
             },
             "default_value": "",
             "maxlength": "",
+            "allow_in_bindings": 0,
             "placeholder": "",
             "prepend": "",
             "append": ""
@@ -28,7 +29,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "all"
+                "value": "kk\/cta-with-form"
             }
         ]
     ],
@@ -41,5 +42,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1732713750
+    "modified": 1732713748
 }

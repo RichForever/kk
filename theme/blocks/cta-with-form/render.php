@@ -5,21 +5,21 @@ $template      = [
 	[
 		'core/heading',
 		[
-			'level'     => 2,
-			'content'   => 'Upadłość konsumencka',
+			'level'     => 3,
+			'content'   => 'Potrzebujesz pomocy prawnej?',
 			'className' => 'mb-0'
 		]
 	],
 	[
 		'core/paragraph',
 		[
-			'content' => 'Jeśli jesteś zainteresowany tematyką upadłości konsumenckiej zachęcam Cię do zapoznania się z podstawowymi informacjami zaprezentowanymi poniżej.',
+			'content' => 'W zależności od Twojej sytuacji może to być jednorazowa konsultacja albo dłuższa współpraca',
 		]
 	],
 	[
 		'core/button',
 		[
-			'text'      => 'Umów nieodpłatną konsultację',
+			'text'      => 'skontaktuj się ze mną',
 			'className' => 'kk-block__btn mt-6'
 		]
 	]
@@ -27,7 +27,7 @@ $template      = [
 ];
 
 
-$blockName                          = 'faq';
+$blockName                          = 'cta-with-form';
 $context                            = Timber::context();
 $context['fields']                  = get_fields();
 $context['block']                   = [

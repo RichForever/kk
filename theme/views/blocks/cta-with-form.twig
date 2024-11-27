@@ -1,0 +1,40 @@
+{% if 'is-style-dark' in block.customClass %}
+    {% set blockBackground = 'bg-gradient-to-br from-[#092342] to-[#06172D]' %}
+{% elseif 'is-style-light' in block.customClass %}
+    {% set blockBackground = 'bg-blue-50' %}
+{% else %}
+    {% set blockBackground = 'bg-white-500' %}
+{% endif %}
+
+<section class="kk-block section px-4 lg:px-8 {{ block.customClass }}" {{ block.anchor }}
+         data-block="{{ block.name|replace({'kk/': ''}) }}">
+    <div class="container rounded-lg text-center relative {{ blockBackground }}">
+        <div class="background-squares">
+            <img src="{{ theme.link }}/assets/images/sqaures-top-{{ 'is-style-dark' in block.customClass ? 'light' : 'dark' }}.svg"
+                 alt=""
+                 class="absolute top-0 right-0 h-1/2 sm:h-3/4 lg:h-full">
+            <img src="{{ theme.link }}/assets/images/sqaures-bottom-{{ 'is-style-dark' in block.customClass ? 'light' : 'dark' }}.svg"
+                 alt=""
+                 class="absolute bottom-0 left-0 h-1/2 sm:h-3/4 lg:h-full">
+        </div>
+        <div class="relative z-10 px-8 py-20 lg:px-20 xl:p-32 flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-32">
+            <div>
+                {% include 'atoms/section-subtitle-pill.twig' with {
+                    'content': fields.subtitle
+                } %}
+                {% block innerBlocksContent %}
+                    <InnerBlocks
+                            allowedBlocks="{{ allowed_blocks | json_encode() | escape('html_attr') }}"
+                            template="{{ allowed_blocks_template | json_encode() | escape('html_attr') }}"
+                            className="flex flex-col gap-4 lg:text-left"
+                    />
+                {% endblock %}
+            </div>
+            <div>
+                {% apply shortcodes %}
+                    {{ fields.form_shortcode }}
+                {% endapply %}
+            </div>
+        </div>
+    </div>
+</section>

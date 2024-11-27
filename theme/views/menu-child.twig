@@ -1,0 +1,17 @@
+<ul
+    class="p-2 space-y-1.5 lg:p-3 lg:bg-white-500 lg:rounded-lg lg:origin-top-right lg:absolute lg:top-8 lg:right-0 lg:-translate-x-0 lg:min-w-[240px] lg:shadow-xl lg:divide-y lg:divide-[#DFECFF] lg:space-y-0 {{ className }}"
+    x-show="openSubmenu"
+    :class="openSubmenu ? 'menu-submenu--active' : ''"
+    x-cloak
+>
+    {% for item in items %}
+        <li class="{{ item.classes | join(' ') }}">
+            <a
+                    @click="open = false"
+                    target="{{ item.target }}"
+                    href="{{ item.link }}"
+                    class="bg-transparent text-black-500 px-3 py-2 w-full inline-block"
+            >{{ item.title }}</a>
+        </li>
+    {% endfor %}
+</ul>

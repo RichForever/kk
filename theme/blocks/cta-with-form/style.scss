@@ -1,0 +1,53 @@
+@use "../../src/scss/utils";
+
+.kk-block.cta-with-form {
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-black-500;
+  }
+
+  p {
+    @apply text-black-300;
+  }
+
+  .wpcf7-form {
+    @apply bg-white-500 border border-blue-100;
+  }
+
+  .wpcf7 h3 {
+    @apply text-black-500;
+  }
+  .wpcf7 p {
+    @apply text-black-300;
+  }
+  .wpcf7 p > a {
+    @apply text-blue-500;
+  }
+
+  &.is-style-dark {
+    h1, h2, h3, h4, h5, h6 {
+      @apply text-white-500;
+    }
+
+    p {
+      @apply text-blue-100;
+    }
+
+    a {
+      @apply text-blue-300 hover:text-blue-400;
+    }
+
+    .wpcf7-form {
+      @apply bg-[#F5F9FF];
+    }
+
+    .wpcf7 h3 {
+      @apply text-black-500;
+    }
+    .wpcf7 p {
+      @apply text-black-300;
+    }
+    .wpcf7 p > a {
+      @apply text-blue-500;
+    }
+  }
+}

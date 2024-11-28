@@ -6,7 +6,9 @@
         {% block title %}
             <h1 class="mb-0 text-white-500">{{ post.title }}</h1>
         {% endblock %}
-        {% block subtitle %}{% endblock %}
+        {% block subtitle %}
+            <!-- If you have a subtitle for the archive page, include it here -->
+        {% endblock %}
     {% endembed %}
 
     <div class="px-4 section">
@@ -35,9 +37,9 @@
 
                 <div class="lg:w-4/12">
                     {% include 'sidebar.twig' with {
-                        'showLatest': true,
+                        'showLatest': false,
                         'showSearch': true,
-                        'showCategories': true
+                        'showCategories': false
                     } %}
                 </div>
 

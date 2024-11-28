@@ -1,4 +1,6 @@
 <div class="flex flex-col gap-12 rounded-lg bg-blue-50 p-6 divide-y divide-blue-100 lg:bg-transparent lg:p-0">
+
+    {% if showLatest %}
     <div class="flex flex-col gap-8">
         <h4 class="text-lg font-extrabold text-black-500">Ostatnie wpisy</h4>
         <div class="flex flex-col gap-6">
@@ -7,12 +9,18 @@
             {% endfor %}
         </div>
     </div>
+    {% endif %}
+
+    {% if showSearch %}
     <div class="flex flex-col gap-8 pt-12">
         <h4 class="text-lg font-extrabold text-black-500">Szukaj</h4>
         <div>
             {% include 'searchform.twig' %}
         </div>
     </div>
+    {% endif %}
+
+    {% if showCategories %}
     <div class="flex flex-col gap-8 pt-12">
         <h4 class="text-lg font-extrabold text-black-500">Kategorie</h4>
         <div>
@@ -30,4 +38,6 @@
             </ul>
         </div>
     </div>
+    {% endif %}
+
 </div>

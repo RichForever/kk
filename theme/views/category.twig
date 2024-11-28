@@ -30,7 +30,11 @@
                 </div>
 
                 <div class="lg:w-4/12">
-                    {% include 'sidebar.twig' %}
+                    {% include 'sidebar.twig' with {
+                        'showLatest': true,
+                        'showSearch': true,
+                        'showCategories': true
+                    } %}
                 </div>
 
             </div>

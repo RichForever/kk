@@ -4,7 +4,6 @@
   "description": "A modern Wordpress theme using Timber, ACF, Tailwind CSS and Alpine JS",
   "license": "MIT",
   "require": {
-    "houke/acf-icon-picker": "dev-master",
     "smithfield-studio/acf-svg-icon-picker": "^3.1",
     "timber/timber": "^2.0",
     "wpackagist-plugin/contact-form-7": "5.8.4",

@@ -1,0 +1,28 @@
+<div class="space-y-4">
+
+    {% if author_data.author_bio.image %}
+        {% include 'atoms/image.twig' with {
+            'imageItem': author_data.author_bio.image,
+            'imageSize': 'image-480',
+            'customClass': 'block h-auto max-w-full mb-4 w-[200px] h-[200px] rounded-lg'
+        } %}
+    {% endif %}
+    
+    {% if author_data.author_bio.title or author_data.author_bio.subtitle %}
+        <div>
+            {% if author_data.author_bio.title %}
+                <h3 class="text-base font-extrabold text-black-500 mb-0">{{ author_data.author_bio.title }}</h3>
+            {% endif %}
+            {% if author_data.author_bio.subtitle %}
+                <h4 class="text-sm">{{ author_data.author_bio.subtitle }}</h4>
+            {% endif %}
+        </div>
+    {% endif %}
+
+    {% if author_data.author_bio.description %}
+        <div class="[&>*]:text-sm">
+            {{ author_data.author_bio.description }}
+        </div>
+    {% endif %}
+    
+</div>

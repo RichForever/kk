@@ -4,13 +4,13 @@
 
     {% embed 'partial/page-title.twig' %}
         {% block title %}
-            <h1 class="mb-0 text-white-500">{{ page_title }}</h1>
+            <h1 class="mb-0 text-white-500">{{ fields.page_title ?: post.title }}</h1>
         {% endblock %}
         {% block subtitle %}
-            {% if page_subtitle %}
-                <h2 class="text-blue-100 text-md font-normal">{{ page_subtitle }}</h2>
-            {% endif %}
             <!-- If you have a subtitle for the archive page, include it here -->
+            {% if fields.page_subtitle %}
+                <h2 class="text-blue-100 text-md font-normal">{{ fields.page_subtitle }}</h2>
+            {% endif %}
         {% endblock %}
     {% endembed %}
 
@@ -39,7 +39,7 @@
                 </div>
 
                 <div class="lg:w-4/12">
-                    {% set showAuthorBio = author_data.show_author_bio ? true : false %}
+                    {% set showAuthorBio = fields.show_author_bio ? true : false %}
                     {% include 'sidebar.twig' with {
                         'showAuthorBio': showAuthorBio,
                         'showLatest': false,

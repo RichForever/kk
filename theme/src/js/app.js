@@ -7,15 +7,16 @@ import scrollToUp from './components/scrollToUp';
 import { initBlock } from './blocks';
 
 const blockNames = [
+  "contact",
   "cta",
   "cta-with-form",
-  "contact",
-  "recent-posts",
-  "info-boxes",
-  "text-with-image",
   "faq",
-  "page-title",
   "hero",
+  "info-boxes",
+  "page-title",
+  "recent-posts",
+  "slider-grid-images",
+  "text-with-image",
   "text-with-image-gallery",
   "text-with-list"
 ];

@@ -18,6 +18,8 @@
     "@babel/core": "^7.21.0",
     "@babel/preset-env": "^7.20.2",
     "@fullhuman/postcss-purgecss": "^5.0.0",
+    "@splidejs/splide": "^4.1.4",
+    "@splidejs/splide-extension-grid": "^0.4.1",
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.10",
     "@webpack-cli/generators": "^3.0.1",

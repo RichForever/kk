@@ -1,0 +1,26 @@
+@use "../../src/scss/utils";
+
+
+.kk-block.slider-grid-images {
+  .splide.is-initialized:not(.is-active).splide--disabled .splide__list {
+    @apply grid grid-cols-[repeat(3,_1fr)] gap-4;
+  }
+  //.splide__arrow {
+  //  &:hover:not(:disabled) {
+  //    @apply opacity-100;
+  //  }
+  //  @apply bg-blue-100 rounded-md;
+  //  svg {
+  //    @apply fill-blue-500;
+  //  }
+  //}
+  .splide__pagination {
+    @apply relative top-0 right-0 bottom-0 left-0 mt-2
+  }
+  .splide__pagination__page {
+    @apply bg-blue-100 hover:opacity-100;
+    &.is-active {
+      @apply bg-blue-500 opacity-100;
+    }
+  }
+}

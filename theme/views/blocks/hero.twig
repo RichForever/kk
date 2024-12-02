@@ -1,8 +1,11 @@
 {% set blockBackground = 'is-style-light' in block.customClass ? 'bg-blue-50' : 'bg-gradient-to-br from-[#092342] to-[#06172D]' %}
-
 <section id="block__{{ block.id }}"
-         class="kk-block section px-4 lg:px-8 relative overflow-hidden {{ block.customClass }} {{ blockBackground }} {{ fixed_menu ? 'pt-28 xl:pt-36' : '' }}" {{ block.anchor }}
-         data-block="{{ block.name|replace({'kk/': ''}) }}">
+         class="kk-block section px-4 lg:px-8 relative overflow-hidden {{ block.customClass }} {{ blockBackground }}" {{ block.anchor }}
+        :class="{
+            'pt-28 xl:pt-36': !isMenuInverted
+        }"
+         data-block="{{ block.name|replace({'kk/': ''}) }}"
+>
     <div class="container items-center rounded-lg text-center {{ fields.overlap ? 'pt-8 pb-10 xl:pb-12' : 'py-20 xl:py-32' }}">
         <div class="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 xl:gap-8 2xl:gap-32">
             <div class="text-center lg:w-6/12 lg:text-left 2xl:w-7/12">

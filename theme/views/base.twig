@@ -13,7 +13,15 @@
     </style>
 </head>
 
-<body class="{{ body_class }} {{ page == '404' ? 'h-full' : '' }}" data-template="base.twig">
+{% set isMenuInverted = is_menu_inverted ? 'true' : 'false' %}
+
+<body
+    class="{{ body_class }}"
+    data-template="base.twig"
+    x-data="{
+        isMenuInverted: {{ isMenuInverted }}
+    }"
+>
 {{ function('wp_body_open') }}
 {% include 'header.twig' %}
 

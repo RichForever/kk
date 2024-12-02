@@ -1,7 +1,13 @@
-<nav class="{{ fixed_menu ?
-'absolute top-0 left-0 w-full z-[999] mt-0 bg-transparent navbar--fixed' :
-'bg-white-500 navbar--static' }} py-4 lg:py-6 px-4 lg:px-8 navbar {{ page == '404' ? 'hidden' : 'block' }}" x-data="{ open: false }"
-     :class="open && 'active'">
+<nav
+    x-data="{ open: false }"
+    :class="{
+        'active': open,
+        'absolute top-0 left-0 w-full z-[999] mt-0 bg-transparent': !isMenuInverted,
+        'bg-white-500 navbar--inverted': isMenuInverted,
+        'absolute top-0 left-0 w-full z-[999] mt-0': isMenuInverted && open,
+    }"
+    class="py-4 lg:py-6 px-4 lg:px-8 navbar"
+>
     <div class="relative z-10 mx-auto flex flex-wrap items-center justify-between lg:container">
         {% include 'partial/brand.twig' %}
         {% include 'partial/hamburger.twig' %}

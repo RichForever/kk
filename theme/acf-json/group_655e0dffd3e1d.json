@@ -4,11 +4,11 @@
     "fields": [
         {
             "key": "field_655e0dff22d14",
-            "label": "Fixed menu",
-            "name": "fixed_menu",
+            "label": "Inverted menu",
+            "name": "is_menu_inverted",
             "aria-label": "",
             "type": "true_false",
-            "instructions": "Select to make menu position fixed",
+            "instructions": "If selected, menu will have white background.\r\nIf not selected, menu will have transparent background and will be placed absolutely",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -18,6 +18,7 @@
             },
             "message": "",
             "default_value": 0,
+            "allow_in_bindings": 1,
             "ui_on_text": "",
             "ui_off_text": "",
             "ui": 1
@@ -41,5 +42,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1732713733
+    "modified": 1733142705
 }

@@ -43,10 +43,14 @@ class wpstarter extends Timber\Site {
 	}
 
 	public function add_to_context( $context ) {
+		global $post;
+
+		$pageId = !is_front_page() && is_home() ? get_option('page_for_posts') : $post->ID;
+
 		$context['site']            = $this;
 		$context['main_menu']       = Timber::get_menu( 'main_menu' );
 		$context['footer_menu']     = Timber::get_menu( 'footer_menu' );
-		$context['fixed_menu']      = get_field( 'fixed_menu' );
+		$context['is_menu_inverted'] = get_field( 'is_menu_inverted', $pageId);
 		$context['options']         = get_fields( 'option' );
 		$context['footer_widget_1'] = Timber::get_widgets( 'footer_widget_1' );
 		$context['footer_widget_2'] = Timber::get_widgets( 'footer_widget_2' );

@@ -1,5 +1,8 @@
 <button class="relative navbar__hamburger lg:hidden" aria-label="Open menu" @click="open = !open">
-    <div class="relative flex overflow-hidden items-center justify-center w-[50px] h-[50px] transform transition-all {{ fixed_menu ? 'bg-white-500' : 'bg-blue-50' }} duration-300 rounded-lg">
+    <div
+        class="relative flex overflow-hidden items-center justify-center w-[50px] h-[50px] transform transition-all duration-300 rounded-lg"
+        :class="[isMenuInverted ? 'bg-white-500' : 'bg-blue-50']"
+    >
         <div class="flex origin-center transform flex-col justify-around overflow-hidden transition-all duration-300 w-[20px] h-[20px]">
             <span class="w-7 origin-left transform bg-blue-500 transition-all duration-300 h-[2px] span__item"></span>
             <span class="w-7 transform rounded bg-blue-500 transition-all delay-75 duration-300 h-[2px] span__item"></span>

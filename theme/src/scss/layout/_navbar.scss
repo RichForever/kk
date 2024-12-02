@@ -46,10 +46,19 @@
   @apply lg:pb-0;
 }
 
-.navbar.navbar--static .menu-item__has-submenu-active > a {
+.navbar.navbar--inverted .menu-item__has-submenu-active > a {
   @apply lg:text-blue-500 lg:hover:text-blue-500;
 }
 
-.navbar.navbar--static .menu-submenu--active {
+.navbar.navbar--inverted .menu-submenu--active {
   @apply lg:shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px];
+}
+
+.navbar:not(.navbar--inverted) .navbar__brand,
+.navbar.active.navbar--inverted .navbar__brand {
+  @apply text-white-500;
+}
+
+.navbar.navbar--inverted .navbar__brand {
+  @apply text-purple-500;
 }

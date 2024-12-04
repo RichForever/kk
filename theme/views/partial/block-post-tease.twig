@@ -10,6 +10,7 @@
     </div>
     <div>
         <div class="flex flex-col items-center gap-4 card__meta md:mb-2 md:items-baseline">
+            {% if not hidePostCategory %}
             <div class="inline-block flex items-center justify-center gap-2 font-bold text-black-500 md:justify-start">
                 {{ function('wpstarter_get_icon', 'icon-tag-small') }}
                 {% for category in post.categories %}
@@ -17,6 +18,7 @@
                        class="border-r border-solid border-blue-200 pr-2 text-sm font-regular last:border-0 last:pr-0 hover:text-blue-500 hover:underline">{{ category }}</a>
                 {% endfor %}
             </div>
+            {% endif %}
             <div class="">
                 <span class="text-sm font-regular text-black-300">{{ post.date|replace({',': ''}) }}</span>
             </div>

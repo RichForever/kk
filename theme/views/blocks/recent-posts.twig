@@ -38,7 +38,9 @@
 
                     {% if posts|length > 0 %}
                         {% for post in posts %}
-                            {% include 'partial/block-post-tease.twig' %}
+                            {% include 'partial/block-post-tease.twig' with {
+                                'hidePostCategory': fields.hide_post_category
+                            } %}
                         {% endfor %}
                     {% endif %}
                 </div>

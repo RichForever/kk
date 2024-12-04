@@ -23,7 +23,9 @@
                     {% if posts|length > 0 %}
                         <div class="flex flex-col gap-20">
                             {% for post in posts %}
-                                {% include 'partial/post-tease-blog.twig' %}
+                                {% include 'partial/post-tease-blog.twig' with {
+                                    'hidePostCategory': fields.hide_post_category
+                                } %}
                             {% endfor %}
                         </div>
                     {% endif %}

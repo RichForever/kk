@@ -15,6 +15,18 @@
 
 {% set isMenuInverted = is_menu_inverted ? 'true' : 'false' %}
 
+{% if fn('is_single') %}
+    {% set isMenuInverted = 'true' %}
+{% endif %}
+
+{% if fn('is_category') %}
+    {% set isMenuInverted = 'true' %}
+{% endif %}
+
+{% if fn('is_search') %}
+    {% set isMenuInverted = 'true' %}
+{% endif %}
+
 <body
     class="{{ body_class }}"
     data-template="base.twig"

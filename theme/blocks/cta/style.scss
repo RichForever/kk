@@ -18,7 +18,7 @@
       @apply text-blue-100;
     }
 
-    a {
+    a:not(.kk-block__btn a) {
       @apply text-blue-300 hover:text-blue-400;
     }
   }
